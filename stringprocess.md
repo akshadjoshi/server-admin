@@ -13,3 +13,8 @@ tail -n3 /etc/passwd /etc/shadow /etc/group
 
 **-n** switch helps us print sepcific number of lines
 ```
+# grep
+```bash
+grep '$_' * | grep -v '_SERVER\|_SESSION'
+```
+`the \| is basically OR and * is for show all`
