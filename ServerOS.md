@@ -72,7 +72,7 @@ rpm -Uvh <packagename>      # to upgrade
 ```
 
 ```sh
-yum repolist all          # to update repo (very similar to apt update)
+yum repolist all          # to show all the avaliable repo on system
 ```
 
 > note : environment group gives graphic 
