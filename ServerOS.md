@@ -87,7 +87,7 @@ nmtui
 
 ```sh
 yum -y update
-yum search epel   # eltra package for linux epel is repolist
+yum search epel   # eltra package for enterprise linux epel is repolist
 yum install epel-release.noarch
 yum install net-tools   # Basic networking tools
 yum install bash* # press TAB
