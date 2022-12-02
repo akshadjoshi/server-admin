@@ -1,0 +1,18 @@
+```
+epel           (Extra Packages for Enterprise Linux)
+REMI repo      (Used to install and configure PHP)
+RPM fusion     (Used to install Multimedia Packages)
+EL repo        (has around 135 packages) > adding it might resolve dependency errors
+NUX repo       (GUI tools for CentOS) > also helps in Desktop creation 
+IUS repo       (provides newer versions of select software for RHEL and CentOS.)
+Webtatic repo  (repository generally deals with the web hosting related packages)
+```
+```bash
+yum repolist        # (will show enable list) 
+yum list            # (avaliable package list)
+yum repolist all    # (will update the repo)
+```
+
+NOTE :  *REMEMBER MORE PACKAGES MEANS LESS DEPENDENCY ERROR*
+
+links : https://tecadmin.net/top-5-yum-repositories-for-centos-rhel-systems/
