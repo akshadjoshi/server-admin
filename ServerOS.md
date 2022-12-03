@@ -37,6 +37,7 @@ https://yum-info.contradodigital.com/     **searchable resource to find awesome 
 /var/lib/rpm  # (database files)
 /etc/yum.repos.d/   # (Repo database)
 ```
+### PACKAGES
  **core utils**  package has all the basic commands
  
 ```bash
