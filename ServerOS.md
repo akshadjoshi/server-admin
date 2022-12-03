@@ -191,6 +191,7 @@ https://www.redhat.com/sysadmin/add-yum-repository
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-setting_repository_options 
 
 **go to page for linux commands**
+
 shorturl.at/yFI02
 
 
