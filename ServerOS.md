@@ -58,7 +58,7 @@ rpm -ql <packagename>   # to know about the package placement in various dir
 rpm -qR <packagename>   # dependency needed to install a package or tool
 ```
 ```sh
-rpm -qF <file/tool name> # to know which package is related
+rpm -qf <file/tool name> # to know which package is related
 # to which (command) ----> package owning detail of Binary (executable file)
 ```
 ```sh
