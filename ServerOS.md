@@ -139,6 +139,11 @@ EXAMPLE:
 
 ```
 ## RPM instal­lation commands
+
+```bash
+rpm -i { filena­me.rpm }   # Install the filename RPM package
+
+```
 ```sh
 rpm -Vv <packagename>   # details about whether a package was modified or not
 ```
@@ -152,7 +157,10 @@ rpm --nodeps -ivF <packagename>    to  *install* and **resolve dependency error*
 ```sh
 rpm -Uvh <packagename>      # to upgrade
 ```
+```bash
+rpm -U --test {filena­me.rpm}     # Test run of instal­lation without actually installing anything
 
+```
 ```sh
 yum repolist all          # to show all the avaliable repo on system you can also check the status of the repo via this cmd
 ```
