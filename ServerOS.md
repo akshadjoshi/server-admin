@@ -57,6 +57,17 @@ rpm -ql <packagename>   # to know about the package placement in various dir
 ```sh
 rpm -qR <packagename>   # dependency needed to install a package or tool
 ```
+```bash
+
+rpm -qcf {/path/to/file}   # Display list of configuration files for a command
+
+EXAMPLE
+[root@localhost ~]# rpm -qcf /usr/bin/bash
+/etc/skel/.bash_logout
+/etc/skel/.bash_profile
+/etc/skel/.bashrc
+
+```
 ```sh
 rpm -qf <file/tool name> # to know which package is related
 # to which (command) ----> package owning detail of Binary (executable file)
