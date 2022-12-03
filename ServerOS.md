@@ -60,6 +60,14 @@ rpm -qR <packagename>   # dependency needed to install a package or tool
 ```sh
 rpm -qf <file/tool name> # to know which package is related
 # to which (command) ----> package owning detail of Binary (executable file)
+
+EXAMPLE
+[root@localhost ~]# rpm -qf /bin/nmtui
+NetworkManager-tui-1.18.8-2.el7_9.x86_64
+[root@localhost ~]# rpm -qf /bin/ssh
+openssh-clients-7.4p1-22.el7_9.x86_64
+
+# which package brought which command
 ```
 ```sh
 rpm -Vv <packagename>   # details about whether a package was modified or not
