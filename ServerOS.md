@@ -42,7 +42,7 @@ https://yum-info.contradodigital.com/     **searchable resource to find awesome 
  
  **net-tools** package has networking tools `like ifconfig`
  
- ### Commands
+ ### RPM Commands
 ```bash
 rpm -qa <packagename>   # to know installed app package
 ```
