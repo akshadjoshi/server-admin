@@ -134,10 +134,8 @@ rpm -qcf {/path/to/file}   # Display list of configuration files for a command
 
 EXAMPLE:
 
-[root@localhost ~]# rpm -qcf /usr/bin/bash
-/etc/skel/.bash_logout
-/etc/skel/.bash_profile
-/etc/skel/.bashrc
+[root@localhost tool]# rpm -qfc /bin/wget 
+/etc/wgetrc
 
 ```
 ## RPM instal­lation commands
