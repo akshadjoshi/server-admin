@@ -40,6 +40,9 @@ https://yum-info.contradodigital.com/     **searchable resource to find awesome 
 ### PACKAGES
  **core utils**  package has all the basic commands
  
+ **net-tools** package has networking tools `like ifconfig`
+ 
+ ### Commands
 ```bash
 rpm -qa <packagename>   # to know installed app package
 ```
