@@ -16,7 +16,7 @@
 ```sh
 nmtui   # a command line tool that is used for network configuration 
 ```
-#### rpm
+### rpm
 
 **Architecture**   
 |              |                |        
@@ -42,44 +42,105 @@ https://yum-info.contradodigital.com/     **searchable resource to find awesome 
  
  **net-tools** package has networking tools `like ifconfig`
  
- ### RPM Commands
+ 
+ ## RPM database queries
 ```bash
-rpm -qa <packagename>   # to know installed app package
+rpm -qa <packagename>   # Show all packages installed on the system
 ```
 ```bash
-rpm -qi <packagename>   # to know about package
-rpm -qpi <packagename>  # to know about any package even not installed ones
+rpm -qi <packagename>   # to know details about installed package
+rpm -qpi <packagename>  # to know about any package even not installed ones but you need the .rpm file of that tool
+
+EXAMPLE:
+
+[root@localhost tool]# ls
+opera-uget-integrator-1.0.0-2.12.x86_64.rpm
+[root@localhost tool]# rpm -qpi opera-uget-integrator-1.0.0-2.12.x86_64.rpm 
+warning: opera-uget-integrator-1.0.0-2.12.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 3dbdc284: NOKEY
+Name        : opera-uget-integrator
+Version     : 1.0.0
+Release     : 2.12
+Architecture: x86_64
+Install Date: (not installed)
+Group       : Productivity/Networking/Web/Utilities
+Size        : 340
+License     : GPL-3.0-or-later
+Signature   : RSA/SHA256, Wed 31 Aug 2022 06:03:55 PM IST, Key ID b88b2fd43dbdc284
+Source RPM  : uget-integrator-1.0.0-2.12.src.rpm
+Build Date  : Wed 31 Aug 2022 06:03:41 PM IST
+Build Host  : cloud102
+Relocations : (not relocatable)
+Packager    : https://bugs.opensuse.org
+Vendor      : openSUSE
+URL         : https://github.com/ugetdm/uget-integrator
+Summary     : Integration of uGet with Opera
+Description :
+Integration of the uGet Download Manager with Opera.
+
 ```
 
 ```bash
 rpm -ql <packagename>   # to know about the package placement in various dir
+
+# List the files controlled by a package
 ```
 ```sh
-rpm -qR <packagename>   # dependency needed to install a package or tool
-```
-```bash
+rpm -qf <file/tool/cmd name> 
+# to know which package is related to which (command) ----> package owning detail of Binary (executable file)
 
-rpm -qcf {/path/to/file}   # Display list of configuration files for a command
+EXAMPLE:
 
-EXAMPLE
-[root@localhost ~]# rpm -qcf /usr/bin/bash
-/etc/skel/.bash_logout
-/etc/skel/.bash_profile
-/etc/skel/.bashrc
-
-```
-```sh
-rpm -qf <file/tool name> # to know which package is related
-# to which (command) ----> package owning detail of Binary (executable file)
-
-EXAMPLE
 [root@localhost ~]# rpm -qf /bin/nmtui
 NetworkManager-tui-1.18.8-2.el7_9.x86_64
 [root@localhost ~]# rpm -qf /bin/ssh
 openssh-clients-7.4p1-22.el7_9.x86_64
 
 # which package brought which command
+[root@localhost tool]# rpm -qf /sbin/ifconfig 
+net-tools-2.0-0.25.20131004git.el7.x86_64
+
 ```
+
+`dependency`
+```sh
+rpm -qR <packagename>   # dependency needed to install a package or tool
+
+ERROR to remember
+root@localhost tool]# rpm -qR opera-uget-integrator-1.0.0-2.12.x86_64.rpm
+package opera-uget-integrator-1.0.0-2.12.x86_64.rpm is not installed
+
+EXAMPLE:
+
+[root@localhost tool]# rpm -qR net-tools 
+/bin/sh
+libc.so.6()(64bit)
+libc.so.6(GLIBC_2.14)(64bit)
+libc.so.6(GLIBC_2.2.5)(64bit)
+libc.so.6(GLIBC_2.3)(64bit)
+libc.so.6(GLIBC_2.3.4)(64bit)
+libc.so.6(GLIBC_2.4)(64bit)
+libselinux.so.1()(64bit)
+rpmlib(CompressedFileNames) <= 3.0.4-1
+rpmlib(FileDigests) <= 4.6.0-1
+rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+rtld(GNU_HASH)
+systemd-units
+rpmlib(PayloadIsXz) <= 5.2-1
+
+```
+```bash
+
+rpm -qcf {/path/to/file}   # Display list of configuration files for a command
+
+EXAMPLE:
+
+[root@localhost ~]# rpm -qcf /usr/bin/bash
+/etc/skel/.bash_logout
+/etc/skel/.bash_profile
+/etc/skel/.bashrc
+
+```
+## RPM instal­lation commands
 ```sh
 rpm -Vv <packagename>   # details about whether a package was modified or not
 ```
