@@ -190,7 +190,8 @@ https://www.redhat.com/sysadmin/add-yum-repository
 
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-setting_repository_options 
 
-
+**go to page for linux commands**
+https://man7.org/linux/man-pages/man1/yum-groups-manager.1.html#:~:text=yum%2Dgroups%2Dmanager%20is%20used,editing%20the%20XML%20by%20hand.
 
 
 
