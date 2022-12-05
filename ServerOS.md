@@ -190,9 +190,16 @@ yum groups install "Server with GUI"
 OR
 yum groups install "Graphical Administration Tools" "GNOME Desktop"
 cat /etc/systemd/system/default.target
+        
 systemctl set-default graphical
+
 systemctl isolate graphical.target
+
 init 6
+
+# By default after installing these packages, the default target should have automatically updated
+# reboot the GUI will automatically be loaded.
+systemctl get-default      # current default target 
 ```
 
 ### YUM
