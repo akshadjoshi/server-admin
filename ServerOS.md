@@ -186,9 +186,12 @@ yum install vim
 ```bash
 yum update 
 yum groups list
+yum groups install "Server with GUI"
+OR
 yum groups install "Graphical Administration Tools" "GNOME Desktop"
 cat /etc/systemd/system/default.target
 systemctl set-default graphical
+systemctl isolate graphical.target
 init 6
 ```
 
