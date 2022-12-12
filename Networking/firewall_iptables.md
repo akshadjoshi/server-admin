@@ -10,13 +10,15 @@ systemctl disable firewalld.service     # completely disable firewalld
 ```
 ## iptables
 
-`concept`
+#### concept
 
-`OUTPUT - source me IP output chain
+OUTPUT - source me IP output chain
 
- INPUT  - hum pe attack lag raha hain (destination me humhara IP)
- 
- FORWARD CHAIN  it replaces IP eg IP changed to port 80`
+INPUT  - hum pe attack lag raha hain (destination me humhara IP)
+
+FORWARD CHAIN  it replaces IP eg IP changed to port 80
+
+
 
 ```sh
 iptables -L
