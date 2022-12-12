@@ -257,15 +257,20 @@ yum groupinfo <PRESS TAB TWICE> # a group of packages which you need for a speci
 
 yum group info Development\ Tools  # will install various development languages in PC 
 ````
-Links : https://access.redhat.com/sites/default/files/attachments/rh_yum_cheatsheet_1214_jcs_print-1.pdf
- 
-**. Configuring Yum and Yum Repositories** `below links`
 
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-configuring_yum_and_yum_repositories
+# Debian
 
-https://www.redhat.com/sysadmin/add-yum-repository
+```bash
+dpkg -l   # list of all the packeages installed 
 
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/sec-setting_repository_options 
+dpkg -l | grep "ps"   
+```
+
+```bash
+dpkg -s <packagename>   # give the package details/status 
+dpkg -s psmisc
+
+```
 
 **go to page for linux commands**  `shorturl.at/yFI02`
 
