@@ -3,6 +3,7 @@
 /etc/fstab          # (permanent mounting point of drives)
 /lib                # (has support files for binary or.exe)
 /etc/os-release     # (tells details about the OS)
-
+/var/cache/yum/     # (repo cache)
 /etc/default/useradd  # (shells default details) 
 
+config.d           # file add in source repo
