@@ -7,3 +7,10 @@
 /etc/default/useradd  # (shells default details) 
 
 config.d           # file add in source repo
+
+The log files for package activities
+
+/var/log/dpkg.log       # Log of dpkg level activity for all package activities
+/var/log/apt/term.log   # Log of generic APT activity
+
+
