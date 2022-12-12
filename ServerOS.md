@@ -272,7 +272,7 @@ dpkg -s psmisc
 
 ```
 
-**go to page for linux commands**  `shorturl.at/yFI02`
+
 
 
 
