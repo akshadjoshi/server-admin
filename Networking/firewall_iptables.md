@@ -8,6 +8,9 @@ systemctl stop firewalld.service
 ```bash 
 systemctl disable firewalld.service     # completely disable firewalld
 ```
+```bash 
+systemctl mask <servicename>            # mask will send the service to /dev/null
+```
 ## iptables
 
 #### concept
