@@ -1,4 +1,4 @@
-```bash
+
 epel           (Extra Packages for Enterprise Linux)
 REMI repo      (Used to install and configure PHP)
 RPM fusion     (Used to install Multimedia Packages)
@@ -13,7 +13,8 @@ yum list            # (avaliable package list)
 yum repolist all    # (will update the repo)
 
 To enable a repository, set enabled=1 in the corresponding repository configuration section in /etc/yum.repos.d/remi.repo.
-```
+
+
 DEBIAN 
 
 debgen.simplylinux.ch   # (repo generator for debian distro)
