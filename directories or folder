@@ -1,1 +1,8 @@
+/var/lib/rpm        # (database files)
+/etc/yum.repos.d/   # (Repo database)
+/etc/fstab          # (permanent mounting point of drives)
+/lib                # (has support files for binary or.exe)
+/etc/os-release     # (tells details about the OS)
+
+/etc/default/useradd  # (shells default details) 
 
