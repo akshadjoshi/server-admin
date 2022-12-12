@@ -12,6 +12,10 @@ yum repolist        # (will show enable list)
 yum list            # (avaliable package list)
 yum repolist all    # (will update the repo)
 
+DEBIAN 
+
+debgen.simplylinux.ch   # (repo generator for debian distro)
+
 
 NOTE :  *REMEMBER MORE PACKAGES MEANS LESS DEPENDENCY ERROR*
 
