@@ -23,3 +23,10 @@ subnet 192.168.1.0 netmark 255.255.255.0{
 }
 
 port DHCP uses udp 67 server side ,68 client side
+now allow the above port in firewall
+
+vim /etc/sysconfig/iptables
+
+systemctl restart iptables.service
+
+iptables -n -L INPUT 
