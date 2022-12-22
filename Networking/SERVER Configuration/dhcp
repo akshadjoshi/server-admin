@@ -1,0 +1,6 @@
+There are 4 steps/check list to configure a server be it DHCP, DNS or any other
+1. see if the required package is installed or not
+2. search the main config file that you need to edit and configure that file according to requirement
+3. after configuration start the respective service
+4. allow the service port in firewall
+
