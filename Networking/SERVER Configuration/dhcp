@@ -21,3 +21,5 @@ subnet 192.168.1.0 netmark 255.255.255.0{
 	# max lease time
 	max-lease-time 7200;
 }
+
+port DHCP uses udp 67 server side ,68 client side
