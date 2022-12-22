@@ -18,3 +18,8 @@ The log files for package activities
 /var/log/apt/term.log   # Log of generic APT activity
 
 
+VARIOUS CONFIGURATION FILES OF DIFFERENT SERVERS
+
+/etc/dhcp/dhcpd.conf          # IPv4 dhcp config file
+/var/lib/dhcpd/dhcpd.leases   # log file to check for ip's given by your dhcp server
+
