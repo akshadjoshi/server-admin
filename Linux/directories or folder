@@ -3,7 +3,7 @@
 /var/lib/rpm        # (database files)
 /etc/yum.repos.d/   # (Repo database)
 /etc/fstab          # (permanent mounting point of drives)
-
+/etc/systemd        # (has service files)
 /etc/os-release     # (tells details about the OS)
 /var/cache/yum/     # (repo cache)
 /etc/default/useradd  # (shells default details) 
@@ -22,4 +22,6 @@ VARIOUS CONFIGURATION FILES OF DIFFERENT SERVERS
 
 /etc/dhcp/dhcpd.conf          # IPv4 dhcp config file
 /var/lib/dhcpd/dhcpd.leases   # log file to check for ip's given by your dhcp server
+
+/etc/sysconfig/dhcpd          # service file for dhcp 
 
