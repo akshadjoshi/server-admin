@@ -4,6 +4,7 @@ There are 4 steps/check list to configure a server be it DHCP, DNS or any other
 3. after configuration start the respective service
 4. allow the service port in firewall
 
+CONFIGURATION :-
 
 authoritative;
 # specify network address and subnet mark
