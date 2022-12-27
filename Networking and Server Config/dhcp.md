@@ -34,4 +34,6 @@ systemctl restart iptables.service
 iptables -n -L INPUT 
 ```
 > dir
+
+
 **/var/lib/dhcpd/dhcpd.leases**   # log file to check for ip's given by your dhcp server.
