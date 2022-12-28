@@ -19,6 +19,11 @@ DHCP Server Configuration file
 **`/etc/dhcp/dhcpd.conf`**
 (it is empty by default)
 
+```bash 
+nano /etc/dhcp/dhcpd.conf
+# use nano to copy paste the configuration
+```
+
 CONFIGURATION :-
 ```
 authoritative;
