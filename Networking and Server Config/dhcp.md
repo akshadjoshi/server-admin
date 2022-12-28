@@ -4,6 +4,21 @@ There are 4 steps/check list to configure a server be it DHCP, DNS or any other
 3. after configuration start the respective service
 4. allow the service port in firewall
 
+
+- **step 1** **(installing)**
+```bash
+yum install dhcp
+rpm -qa | grep dhcp		#to check for the packages installed 
+
+```
+- **step 2**  **(search for main config file and configure it)**
+```bash
+rpm -qc dhcp
+```
+DHCP Server Configuration file 
+**`/etc/dhcp/dhcpd.conf`**
+(it is empty by default)
+
 CONFIGURATION :-
 ```
 authoritative;
@@ -23,6 +38,8 @@ subnet 192.168.1.0 netmark 255.255.255.0{
 	max-lease-time 7200;
 }
 ```
+- **step 4** **(allow the service port in firewall)**
+
 port DHCP uses udp 67 server side ,68 client side
 now allow the above port in firewall
 ```sh
