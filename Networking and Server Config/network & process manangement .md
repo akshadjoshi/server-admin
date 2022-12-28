@@ -1,3 +1,6 @@
+## NETWORK
+
+
 ```bash
 netstat -ntup     # shows ports that a in use or ports that have connection established
 ```
@@ -14,3 +17,30 @@ netstat -t        # will tell active and connected ports TCP
 
  **/etc/network/interfaces**
  > has dedicated files for network interface in Debian 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## PROCESS
+
+
+
