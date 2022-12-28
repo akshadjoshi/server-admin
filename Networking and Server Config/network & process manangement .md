@@ -11,7 +11,19 @@ netstat -nltup     # shows listening ports
 ```bash 
 netstat -t        # will tell active and connected ports TCP
 ```
+```bash
+lsof -i -n            # will show details of network activities
+lsof -i -n TCP        # will show TCP traffic
+lsof -u ^root -n      # will show the data excluding root
 
+```
+```bash 
+lsof -n -i UDP:67    # to see trafic on specific port
+```
+
+```bash
+
+```
 
 
 **/etc/sysconfig/network-scripts/**       
@@ -50,7 +62,21 @@ ps -axjf  # show process and in branched format (GOOD WAY use this)
 kill <process ID>
 ```
 ```bash
+killall <processname>
+```
+```bash 
+killall -r <name>   # regex give any name relating to the process and it will match the regex
+```
+you can use **htop** for process management
 
+```bash 
+htop -t     # will give output in branch format 
 ```
 
+```bash 
+htop -t -u <username>
+```
 
+```bash
+htop -t -u <username> -p <PID>
+```
