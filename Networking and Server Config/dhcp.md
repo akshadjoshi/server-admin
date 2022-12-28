@@ -5,7 +5,7 @@ There are 4 steps/check list to configure a server be it DHCP, DNS or any other
 4. allow the service port in firewall
 
 CONFIGURATION :-
-
+```
 authoritative;
 # specify network address and subnet mark
 subnet 192.168.1.0 netmark 255.255.255.0{
@@ -22,16 +22,19 @@ subnet 192.168.1.0 netmark 255.255.255.0{
 	# max lease time
 	max-lease-time 7200;
 }
-
+```
 port DHCP uses udp 67 server side ,68 client side
 now allow the above port in firewall
-
+```sh
 vim /etc/sysconfig/iptables
-
-
+```
+```sh
 systemctl restart iptables.service
-
+```
+```bash
 iptables -n -L INPUT 
+```
+<B><SUP>log file to check for ip's given by your dhcp server.</SUP>
 
+**` /var/lib/dhcpd/dhcpd.leases`**		
 
-/var/lib/dhcpd/dhcpd.leases	# log file to check for ip's given by your dhcp server.
