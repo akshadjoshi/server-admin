@@ -47,7 +47,7 @@ ps -ejH   # shows process/commands and sub process or command in a branch format
 ps -axjf  # show process and in branched format (GOOD WAY use this)
 ```
 ```bash
-
+kill <process ID>
 ```
 ```bash
 
