@@ -25,6 +25,9 @@ The log files for package activities
 /var/log/dpkg.log       # (Log of dpkg level activity for all package activities)
 /var/log/apt/term.log   # (Log of generic APT activity)
 
+SERVICE is manintained in
+
+/etc/init.d/          # this FILE contains or has the service files which 
 
 VARIOUS CONFIGURATION FILES OF DIFFERENT SERVERS
 
