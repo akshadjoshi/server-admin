@@ -10,4 +10,7 @@ netstat -t        # will tell active and connected ports TCP
 ```
 
 **/etc/sysconfig/network-scripts/**       
-> has dedicated files for network interface ets0 old linux
+> has dedicated files for network interface in centOS ets0 old linux 
+
+ **/etc/network/interfaces**
+ > has dedicated files for network interface in Debian 
