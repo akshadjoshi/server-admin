@@ -15,6 +15,8 @@
                     
 /etc/resolv.conf      # dns information
 /etc/sysconfig
+/etc/sysconfig/network-scripts/       # has dedicated files for network interface (only in centOS)
+
 
 config.d           # file add in source repo
 
