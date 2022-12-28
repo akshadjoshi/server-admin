@@ -27,4 +27,20 @@ netstat -t        # will tell active and connected ports TCP
 ## PROCESS
 
 
+```bash
+jobs     # shows running commands in background 
+
+fg      # to bring that background command in front
+
+PRESS ctrl + c to kill 
+```
+
+```bash
+
+```
+
+
+```bash
+
+```
 
