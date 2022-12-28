@@ -27,7 +27,7 @@ The log files for package activities
 
 SERVICE is manintained in
 
-/etc/init.d/          # this FILE contains or has the service files which 
+/etc/init.d/          # this FILE contains or has the service files which help in maintaining applications
 
 VARIOUS CONFIGURATION FILES OF DIFFERENT SERVERS
 
