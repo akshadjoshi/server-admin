@@ -7,8 +7,12 @@
 /etc/os-release     # (tells details about the OS)
 /var/cache/yum/     # (repo cache)
 /etc/default/useradd  # (shells default details) 
+
+
 /var/lib/mlocate/mlocate.db  # (database files for mlocate)
 
+/etc/hostname  ---- localhost.localdomain
+                    hostname     FQDN
 
 config.d           # file add in source repo
 
