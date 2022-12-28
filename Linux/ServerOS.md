@@ -42,6 +42,7 @@ https://yum-info.contradodigital.com/     **searchable resource to find awesome 
  
  **net-tools** package has networking tools `like ifconfig`
  
+ **psmisc** package will bring all the process management related commands
  
  ## RPM database queries
 ```bash
