@@ -9,3 +9,4 @@ netstat -nltup     # shows listening ports
 netstat -t        # will tell active and connected ports TCP
 ```
 
+**/etc/sysconfig/network-scripts/**       # has dedicated files for network interface ets0 old linux
