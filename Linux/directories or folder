@@ -8,11 +8,13 @@
 /var/cache/yum/     # (repo cache)
 /etc/default/useradd  # (shells default details) 
 
-
 /var/lib/mlocate/mlocate.db  # (database files for mlocate)
 
 /etc/hostname  ---- localhost.localdomain
                     hostname     FQDN
+                    
+/etc/resolv.conf      # dns information
+/etc/sysconfig
 
 config.d           # file add in source repo
 
