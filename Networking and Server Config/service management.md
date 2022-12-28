@@ -31,3 +31,64 @@ Service maintains our Appication
  ls -lha | grep httpd
 -rw-r--r--.  1 root root  752 Jan 13  2022 httpd.service
   ```
+```bash
+  chkconfig --list # run level command
+  ```
+  
+  ## NEW Methord
+  
+  ```bash
+  systemctl --type=service        # will show all the services
+  ```
+  
+  ```bash
+  systemctl --type=service --state=running    # will show the services that are running 
+  ```
+  
+  ```bash
+   systemctl --type=service --state=exited      # will show the status of exited service
+  ```
+  
+  #### subcommand
+  
+  ```bash
+  systemctl list-units --type=service
+  ```
+  ```bash
+  systemctl list-units --type=service --state=running | grep ssh
+  
+  # cmd to grep a particular service
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
