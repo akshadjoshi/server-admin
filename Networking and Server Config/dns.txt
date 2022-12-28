@@ -1,2 +1,2 @@
-/etc/sysconfig/network-scripts/       # has dedicated files for network interface
+/etc/sysconfig/network-scripts/       # has dedicated files for network interface ets0 old linux
 
