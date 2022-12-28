@@ -13,7 +13,7 @@
 /etc/hostname  ---- localhost.localdomain
                     hostname     FQDN
                     
-/etc/resolv.conf      # dns information
+
 /etc/sysconfig
 /etc/sysconfig/network-scripts/       # has dedicated files for network interface (only in centOS)
 
@@ -28,8 +28,14 @@ The log files for package activities
 
 VARIOUS CONFIGURATION FILES OF DIFFERENT SERVERS
 
+DHCP
+
 /etc/dhcp/dhcpd.conf          # IPv4 dhcp config file
 /var/lib/dhcpd/dhcpd.leases   # log file to check for ip's given by your dhcp server
 
 /etc/sysconfig/dhcpd          # service file for dhcp 
+
+DNS
+
+/etc/resolv.conf      # dns information
 
