@@ -28,6 +28,8 @@ nmtui   # a command line tool that is used for network configuration
 `A package contains`
 Name | Version | Release | Architecture
 
+package is a single file but when you install it, it places the file in various location or DIR
+
 http://rpmfind.net/  **site to search for rpm packages**
 
 https://yum-info.contradodigital.com/     **searchable resource to find awesome packages to install via yum**
