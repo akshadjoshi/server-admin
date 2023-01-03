@@ -6,7 +6,19 @@ OUTPUT - source me IP output chain
 
 INPUT  - hum pe attack lag raha hain (destination me humhara IP)
 
+**INPUT** - data jab humhare server pe aaraha ho. Jab hum par attack lagega toh data hum par aae ga
+(jo bhi packets humhare pass aaegay usme destination me humhara IP hoga. aur jab bhi **destination** me humhara IP hoga hum INPUT chain ko dhekhegay)**
+
+
 FORWARD CHAIN  it replaces IP eg IP changed to port 80
+
+**FORWARD** - WHEN destination me router ka IP (i.e aap ka ip)toh inbound traffic. But when router ne packet liya aur internal PC pe forward kardiya or another kisi server par send kardiya
+
+ROUTER packet ka source and destination modify karega aur usse aage forward kardega rather than consuming it 
+
+eg : router ki port  80 pe jo traffic aaraha hain hum chahate hain ki vo 8080 par chala ja e toh iss senario ke liye FORWARD rule lagaegay
+
+it can forward the packet/traffic internally, external, in the lan. packet ko utilize nahi kar ta modify and forward 
 
 check for iptables in the system 
 
