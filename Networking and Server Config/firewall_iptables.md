@@ -43,3 +43,12 @@ systemctl mask <servicename>            # mask will send the service to /dev/nul
 ```sh
 iptables -L
 ```
+```bash
+iptables -n --line-numbers -L INPUT
+```
+
+
+
+
+
+
