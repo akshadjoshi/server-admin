@@ -34,6 +34,11 @@ http://rpmfind.net/  **site to search for rpm packages**
 
 https://yum-info.contradodigital.com/     **searchable resource to find awesome packages to install via yum**
 
+### TYPE of rpm file
+
+1. RPM - contains the compiled code
+2. SRPM - contains the source code for a particular application
+
 #### Dir
 ```sh
 /var/lib/rpm  # (database files)
