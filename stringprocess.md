@@ -18,3 +18,10 @@ tail -n3 /etc/passwd /etc/shadow /etc/group
 grep '$_' * | grep -v '_SERVER\|_SESSION'
 ```
 `the \| is basically OR and * is for show all`
+
+
+# find
+
+```bash
+find /dir/to/search -name "file-pattern" -print | xargs grep "word-to-search"
+```
