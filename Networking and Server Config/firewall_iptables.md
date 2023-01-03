@@ -47,7 +47,9 @@ iptables -L
 iptables -n --line-numbers -L INPUT
 ```
 
-
+```bash
+iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       # cmd to allow a particular port in iptables or through firewall
+```
 
 
 
