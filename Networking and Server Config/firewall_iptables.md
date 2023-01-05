@@ -1,6 +1,6 @@
 ## iptables
 
-#### concept
+<!-- #### concept
 
 OUTPUT - source me IP output chain
 
@@ -18,9 +18,10 @@ ROUTER packet ka source and destination modify karega aur usse aage forward kard
 
 eg : router ki port  80 pe jo traffic aaraha hain hum chahate hain ki vo 8080 par chala ja e toh iss senario ke liye FORWARD rule lagaegay
 
-it can forward the packet/traffic internally, external, in the lan. packet ko utilize nahi kar ta modify and forward 
+it can forward the packet/traffic internally, external, in the lan. packet ko utilize nahi kar ta modify and forward --> 
 
-check for iptables in the system 
+
+**check for iptables in the system** 
 
 ```bash
 rpm -qa | grep iptables
@@ -67,4 +68,5 @@ iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       # cmd to allow a particula
 
 
 
+## Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
 
