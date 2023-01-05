@@ -68,5 +68,5 @@ iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       # cmd to allow a particula
 
 
 
-## Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
+#### Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
 
