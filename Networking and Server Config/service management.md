@@ -36,6 +36,8 @@ Service maintains our Appication
   ```
   
   ## NEW Methord
+ 
+  in new methord service is maintained by **`/usr/lib/systemd/system`**
   
   ```bash
   systemctl --type=service        # will show all the services
