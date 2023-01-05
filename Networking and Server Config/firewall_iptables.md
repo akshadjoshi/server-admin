@@ -51,6 +51,8 @@ systemctl mask <servicename>            # mask will send the service to /dev/nul
 ```
 
 
+iptables main configuration file **`/etc/sysconfig/iptables`**
+
 
 ```sh
 iptables -L
