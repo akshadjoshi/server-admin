@@ -1,4 +1,8 @@
 # OSCP
+**linux has**
+centos cmd
+dir list
+
 
 **networking and server config has :**
 1. cmd for process, network and service management 
