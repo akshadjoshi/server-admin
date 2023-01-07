@@ -96,7 +96,7 @@ $ nc -v 192.168.1.200 9001                                                      
 192.168.1.200: inverse host lookup failed: Unknown host
 (UNKNOWN) [192.168.1.200] 9001 (?) : No route to host
 
-
 ```
+
 #### Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
 
