@@ -22,6 +22,8 @@ DHCP Server Configuration file
 ```bash 
 nano /etc/dhcp/dhcpd.conf
 # use nano to copy paste the configuration
+
+ctrl + o (to save in nano)
 ```
 
 CONFIGURATION :-
