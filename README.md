@@ -1,7 +1,7 @@
 # OSCP
 **linux has**
-centos cmd
-dir list
+1. centos cmd
+2. dir list
 
 
 **networking and server config has :**
