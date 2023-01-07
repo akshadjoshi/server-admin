@@ -72,7 +72,7 @@ iptables -A INPUT -p tcp --dport 2222 -j ACCEPT
 ```bash
 iptables -I INPUT -p tcp --dport 2222 -j ACCEPT        # cmd to allow or inser a port in firewall 
 
-# this command will by default insert the port at the top of the list (among the 5 rules) 
+> this command will by default insert the port at the top of the list (among the 5 rules) 
 ```
 
 
@@ -81,8 +81,22 @@ iptables -D INPUT <chain number>						# to delete a chain from the table
            <chain>
 ```
 ### ERRORS
+1. when the **port is allowed in firewall via iptables** but **service is not running on the server**
+
+```bash
+$ nc -v 192.168.1.200 9001                                                                                                                              1 
+192.168.1.200: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.1.200] 9001 (?) : Connection refused
+ 
+```
+2. when the **port is not allowed in firewall via iptables** but **service is running on the server**
+
+```bash
+$ nc -v 192.168.1.200 9001                                                                                                                              1 
+192.168.1.200: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.1.200] 9001 (?) : No route to host
 
 
-
+```
 #### Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
 
