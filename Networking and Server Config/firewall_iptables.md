@@ -63,7 +63,9 @@ iptables -n --line-numbers -L INPUT
 ```
 
 ```bash
-iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       # cmd to allow a particular port in iptables or through firewall
+iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       
+
+# it won't work because the sequence is important. You need to specify the port above the REJCET line
 ```
 
 
