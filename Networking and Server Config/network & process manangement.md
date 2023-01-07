@@ -1,5 +1,9 @@
+
+
 ## NETWORK
 
+**`/etc/sysconfig/network-scripts/`**  has dedicated files for network interface in centOS ets0 old linux         
+**`/etc/network/interfaces`**   has dedicated files for network interface in Debian
 
 ```bash
 netstat -ntup      # shows ports that a in use or ports that have connection established
@@ -24,13 +28,6 @@ lsof -n -i UDP:67    # to see trafic on specific port
 ```bash
 
 ```
-
-
-**/etc/sysconfig/network-scripts/**       
-> has dedicated files for network interface in centOS ets0 old linux 
-
- **/etc/network/interfaces**
- > has dedicated files for network interface in Debian 
 
 
 ## PROCESS
