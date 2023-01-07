@@ -64,9 +64,18 @@ iptables -n --line-numbers -L INPUT
 
 ```bash
 iptables -A INPUT -p tcp --dport 2222 -j ACCEPT       
-
 # it won't work because the sequence is important. You need to specify the port above the REJCET line
+# -A this switch will by default add the port to the end of the list bellow the REJECT 
 ```
+`switches` `-A append or add and chain` `-p protocol` `--dport port to allow` `-j ACCEPT OR REJECT `
+
+```bash
+iptables -I INPUT -p tcp --dport 2222 -j ACCEPT        # cmd to allow or inser a port in firewall 
+
+# this command will by default insert the port at the top of the list (among the 5 rules) 
+```
+
+
 ```bash
 iptables -D INPUT <chain number>						# to delete a chain from the table 	
            <chain>
