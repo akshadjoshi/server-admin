@@ -72,7 +72,7 @@ iptables -A INPUT -p tcp --dport 2222 -j ACCEPT
 ```bash
 iptables -I INPUT -p tcp --dport 2222 -j ACCEPT        # cmd to allow or inser a port in firewall 
 
-> this command will by default insert the port at the top of the list (among the 5 rules) 
+# this command will by default insert the port at the top of the list (among the 5 rules) 
 ```
 
 
