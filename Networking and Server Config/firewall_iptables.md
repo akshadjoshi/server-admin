@@ -80,6 +80,8 @@ iptables -I INPUT -p tcp --dport 2222 -j ACCEPT        # cmd to allow or inser a
 iptables -D INPUT <chain number>						# to delete a chain from the table 	
            <chain>
 ```
+### ERRORS
+
 
 
 #### Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
