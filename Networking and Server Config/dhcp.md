@@ -62,3 +62,36 @@ iptables -n -L INPUT
 
 **` /var/lib/dhcpd/dhcpd.leases`**		
 
+	
+#### static IP to client 
+	
+	
+	
+```bash
+authoritative;
+        # specify network address and subnet mark
+        subnet 192.168.1.0 netmask 255.255.255.0{
+        # specify the range of lease IP address
+        range 192.168.1.240 192.168.1.250;
+        # specify default gateway
+        option routers 192.168.1.1;
+        # DNS servers for name resolution
+        option domain-name-servers 8.8.8.8, 8.8.4.4;
+        # specify broadcast address
+        option broadcast-address 192.168.1.255;
+        # default lease time it takes in second
+        default-lease-time 600;
+        # max lease time
+        max-lease-time 7200;
+}
+
+host windows {
+    hardware ethernet    <computer's mac address>;
+    fixed-address        192.168.1.242;
+    max-lease-time       84600; 
+}
+
+	
+```
+	
+	
