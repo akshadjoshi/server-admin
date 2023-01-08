@@ -60,7 +60,7 @@ iptables -n -L INPUT
 ```
 <B><SUP>log file to check for ip's given by your dhcp server.</SUP>
 
-**` /var/lib/dhcpd/dhcpd.leases`**		
+**` /var/lib/dhcpd/dhcpd.leases`**	</B>	
 
 	
 #### static IP to client 
@@ -95,3 +95,4 @@ host windows {
 ```
 	
 	
+**Note** : in order to perform this practical you need to set the **network adapter settings** to **Internal Network** for both server and client 
