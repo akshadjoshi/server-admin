@@ -29,8 +29,8 @@ ctrl + o (to save in nano)
 CONFIGURATION :-
 ```
 authoritative;
-# specify network address and subnet mark
-subnet 192.168.1.0 netmark 255.255.255.0{
+# specify network address and subnet mask
+subnet 192.168.1.0 netmask 255.255.255.0{
 	# specify the range of lease IP address
 	range 192.168.1.50 192.168.1.250;
 	# specify default gateway
