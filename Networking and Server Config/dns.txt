@@ -1,0 +1,17 @@
+TYPE OF DNS SERVER (dns server is a kind of database server that resolve queries)
+1. authoritative - SEVER that hold records PRIMARY AND SECONDARY dns come under this 
+2. non authoritative - don't hold records but they resolve query via help of another server **forwarder** AND **CHACHE ONLY** dns come under this
+
+
+TYPE OF DNS RECORD
+
+A - ADDRESS MAPPING RECORD (YOU HAVE A DOMAIN NAME AND YOU NEED IPv4 record OF that name this record will give you that)
+AAAA - IPv6 record
+CNAME - alias name, synonyms or canonical record (www.example.com, example.com, wordpress.example, cloudfare)  
+SRV RECORD
+
+**`
+/etc/sysconfig/network-scripts/       # has dedicated files for network interface ets0 old linux
+`**
+
+
