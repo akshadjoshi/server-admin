@@ -8,6 +8,30 @@ TYPE OF DNS RECORD
 A - ADDRESS MAPPING RECORD (YOU HAVE A DOMAIN NAME AND YOU NEED IPv4 record OF that name this record will give you that)
 AAAA - IPv6 record
 CNAME - alias name, synonyms or canonical record (www.example.com, example.com, wordpress.example, cloudfare)  
+NS RECORD - the server by which it is resolving or maintaining the paticular domain
+
+
+$ nslookup -type=ns <domian name>
+SOA - the primary server among all the server avaliable 
+
+$ nslookup -type=soa fackbook.com
+OUTPUT
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+fackbook.com
+	origin = ns1.bodis.com
+	mail addr = dnsadmin.bodis.com
+	serial = 2017062202
+	refresh = 10800
+	retry = 3600
+	expire = 1209600
+	minimum = 3600
+
+Authoritative answers can be found from:
+
+
 SRV RECORD
 
 **`
