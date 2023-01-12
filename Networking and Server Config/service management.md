@@ -53,7 +53,11 @@ Service maintains our Appication
   ```bash
   systemctl list-units --type # PRESS TAB
   ```
+  ```bash
+  systemctl isolate 
   
+  # command is used to switch the system to a specific target by deactivating the currently active target and activating the specified target
+  ```
   #### subcommand
   
   ```bash
