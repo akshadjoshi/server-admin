@@ -50,6 +50,9 @@ Service maintains our Appication
   ```bash
    systemctl --type=service --state=exited      # will show the status of exited service
   ```
+  ```bash
+  systemctl list-units --type # PRESS TAB
+  ```
   
   #### subcommand
   
