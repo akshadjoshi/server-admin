@@ -2,7 +2,7 @@
 `red hat (.rpm)` `centOS, Fedora` 
 
 `linux structure`
-| user    | shell | kernal | hardware      
+| user    | shell | kernel | hardware      
 | ------- | ---   | -----  | --------
          
 ```bash
