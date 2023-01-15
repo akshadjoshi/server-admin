@@ -31,4 +31,24 @@ dig <domain name> @<server which you want to resolv query from>
 ```bash
 dig www.google.com +short   # will give short answer (by default it gives A record)
 ```
+```bash
+dig google.com +short       # will give A record 
+```
+```bash
+dig google.com ns +noall +answer  # will give NS record and answer field of query
+
+# you can use it but 'short' is better;
+```
+```bash
+dig -f <file that contain domain names> +short
+```
+```bash
+dig -x 8.8.8.8   # will bring PTR record
+# PTR record is basically when you have IP and want to know its Domain
+```
+
+
+
+
+
 
