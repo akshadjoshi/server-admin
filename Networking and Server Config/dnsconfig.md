@@ -72,7 +72,7 @@ ALL the *files* that are in under the name **`/var/named/`** are also configurat
 cat /etc/named.conf
 ```
 
-DNS runs on port **53**
+
 
 vim **/etc/named.conf**
 
@@ -165,5 +165,26 @@ dig googl.com @127.0.0.1		# resolving query via localhost after DNS config
 when you conf DNS nslookup and dig cmd don't use your PC cache it used server cache
 but when you seach something on browser it uses PC cache
 
+**step 4: Allow the port in firewall**
+DNS runs on port **53** of udp
+```bash
+vim /etc/sysconfig/iptables
 
+```
+
+`if you will not allow the port you can't resolve the query from any other PC in the LAN because the service is running internally` 
+THIS IS THE **ERROR** YOU WILL SEE ON OTHER PC
+```sh
+└─$ nslookup facebook.com 192.168.1.200                                                                                                                  10 ⨯
+;; communications error to 192.168.1.200#53: timed out
+Server:		192.168.1.200
+Address:	192.168.1.200#53
+
+** server can't find facebook.com: SERVFAIL
+```
+
+```bash
+
+
+```
 
