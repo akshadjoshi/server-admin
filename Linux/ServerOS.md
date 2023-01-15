@@ -7,6 +7,10 @@
          
 ```bash
 # shell is where user interation happens
+# kernel: It is responsible for interacting with the hardware of a computer basically it acts as a bridge between the hardware and software.
+
+# DIFF B/W kernel and shell
+# WHERE AS A  Shell and Applications are built on top of the kernel, providing a way for the user to interact with the operating system
 ```
 | Distribution | Package Format | Package Manager | OS      
 | -------------| ---------------| --------------- | --------
