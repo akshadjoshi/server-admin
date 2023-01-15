@@ -46,7 +46,7 @@ dig -f <file that contain domain names> +short
 dig -x 8.8.8.8   # will bring PTR record
 # PTR record is basically when you have IP and want to know its Domain
 ```
-
+**step 2: Find the configuration file and configure it**
 ### cache only DNS server
 
 ```bash
@@ -139,4 +139,31 @@ include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
 
 ```
+
+**step 3 : start the service**
+
+
+```bash
+systemctl status named.service		# named is the service name for DNS server and bind is the package
+```
+```bash 
+systemctl restart named.service		# start the service
+```
+
+```bash
+netstat -nltup				# check if the service is running on the port be it default or defined
+
+# if you see dnsmasq don't get confused because its a internal used service has nothing to do with your DNS server conf
+# look for your IP and localhost 
+```
+to check if DNS is configured properly resolve a domain via localhost
+
+
+```bash
+dig googl.com @127.0.0.1		# resolving query via localhost after DNS config
+```
+when you conf DNS nslookup and dig cmd don't use your PC cache it used server cache
+but when you seach something on browser it uses PC cache
+
+
 
