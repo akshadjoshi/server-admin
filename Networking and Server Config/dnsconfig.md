@@ -16,9 +16,19 @@ rpm -ql <packagename>       # will give you the details of all the files that ca
 
 # it is a client tool so it does not have configuration file
  ```
+ #### dig
  
 ```sh
 dig   # this will give you the details of rooting servers
 
 # there are 13 rooting servers accross the world (a-m)
 ```
+```bash
+dig google.com @64.6.64.6
+
+dig <domain name> @<server which you want to resolv query from>
+```
+```bash
+dig www.google.com +short   # will give short answer (by default it gives A record)
+```
+
