@@ -49,8 +49,21 @@ dig -x 8.8.8.8   # will bring PTR record
 
 ### cache only DNS server
 
+```bash
+vim /etc/hostname
+```
+```bash
+cat /etc/resolv.conf     # DNS infomation   
+```
 
+to configure DNS you see **bind** package 
 
+```bash
+rpm -qc bind-9.11.4-26.P2.el7_9.10.x86_64
 
+# the config files that you will see after running the -qc are not the only configuration files that come with the package 
+# they are just the main ones
+```
+**`/etc/named*`** all the files that start with **named** are main files
 
-
+ALL the *files* that are in under the name **`/var/named/`** are also configuration files
