@@ -269,7 +269,9 @@ yum groupinfo <PRESS TAB TWICE> # a group of packages which you need for a speci
 
 yum group info Development\ Tools  # will install various development languages in PC 
 ````
-
+```bash
+yum grouplist hidden                         
+```
 # Debian
 
 ```bash
