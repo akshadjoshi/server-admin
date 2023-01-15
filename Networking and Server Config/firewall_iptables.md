@@ -97,6 +97,6 @@ $ nc -v 192.168.1.200 9001                                                      
 (UNKNOWN) [192.168.1.200] 9001 (?) : No route to host
 
 ```
-
+**port**  `is a logical connection point used to direct data to a specific service`
 #### Note : the concept of iptables is comment out by me because of linguistic reasons see this page in raw form to reveal the concept 
 
