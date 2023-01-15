@@ -47,6 +47,8 @@ dig -x 8.8.8.8   # will bring PTR record
 # PTR record is basically when you have IP and want to know its Domain
 ```
 
+### cache only DNS server
+
 
 
 
