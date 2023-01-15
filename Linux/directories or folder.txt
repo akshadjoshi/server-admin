@@ -43,7 +43,7 @@ DNS
 /etc/resolv.conf      # dns information
 
 THE BELLOW FILES HELP MAINTAIN ZONE IN DNS
-/var/named/named.ca             # to maintain ca record
-/var/named/named.empty          
-/var/named/named.localhost      # file to maintain localhost zone
+/var/named/named.ca             # to maintain ca record (has the detail of 13 rooting server)
+/var/named/named.empty         
+/var/named/named.localhost      # file to maintain localhost zone (localhost name will be resolved from here)
 /var/named/named.loopback        # loopback zone maintain 
