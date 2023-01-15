@@ -17,3 +17,8 @@ rpm -ql <packagename>       # will give you the details of all the files that ca
 # it is a client tool so it does not have configuration file
  ```
  
+```sh
+dig   # this will give you the details of rooting servers
+
+# there are 13 rooting servers accross the world (a-m)
+```
