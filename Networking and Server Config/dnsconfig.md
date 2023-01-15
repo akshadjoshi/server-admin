@@ -185,6 +185,11 @@ Address:	192.168.1.200#53
 
 ```bash
 
+iptables -I INPUT 4 -p udp --dport 53 -j ACCEPT			# this will allow the port in firewall temporarily
 
+# INPUT 4 WILL ADD IT ON NO. 4 AND THE EXISTING 4TH NO. LINE WILL ON 5TH 
 ```
 
+
+
+> THIS ENDS CACHE ONLY DNS SERVER CONFIG
