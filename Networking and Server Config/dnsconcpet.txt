@@ -5,10 +5,12 @@ TYPE OF DNS SERVER (dns server is a kind of database server that resolve queries
 
 TYPE OF DNS RECORD
 
-A - ADDRESS MAPPING RECORD (YOU HAVE A DOMAIN NAME AND YOU NEED IPv4 record OF that name this record will give you that)
+A - ADDRESS MAPPING RECORD (YOU HAVE A DOMAIN NAME AND YOU NEED IPv4 record OF that name this record will give you that) are made on authoritative server under PRIMARY server (we make records here and DNS works on those records)
 AAAA - IPv6 record
-CNAME - alias name, synonyms or canonical record (www.example.com, example.com, wordpress.example, cloudfare)  
-NS RECORD - the server by which it is resolving or maintaining the paticular domain
+
+CNAME - alias name, synonyms or canonical record (www.example.com, example.com, wordpress.example.com, cloudfare) (used this when we use 3rd party vendor so they give there subdomain along with the domain we want)
+
+NS RECORD - the server by which it is resolving or maintaining the paticular domain. The NS record specifies an authoritative name server for the given host. This is that responsible record that points towards the primary and secondary record, basically if you want to know about the name records of a paticular domain and where they are holded
 
 
 $ nslookup -type=ns <domian name>
