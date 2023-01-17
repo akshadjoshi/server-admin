@@ -47,7 +47,7 @@ dig -x 8.8.8.8   # will bring PTR record
 # PTR record is basically when you have IP and want to know its Domain
 ```
 **step 2: Find the configuration file and configure it**
-### cache only DNS server
+### cache only DNS server	(comes under non-authoritive server)
 
 ```bash
 vim /etc/hostname
