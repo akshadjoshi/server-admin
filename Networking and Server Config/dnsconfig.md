@@ -259,7 +259,11 @@ $TTL 1D
 ```bash
 named-checkconf		# to check for errors in /etc/named.config
 ```
-
+```bash
+named-checkzone cipher.local /var/named/forward.cipher.local
+		 (zonename)
+# to check for error in zone file 
+```
 
 
 
