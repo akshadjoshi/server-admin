@@ -203,3 +203,68 @@ hostname		# the zone you are going to make should get resolved here
 
 # it is NOT necessary that you need to set FQDN to resovle 
 ```
+
+```bash
+vim /etc/hosts		# bind the hostname with IP
+```
+```bash
+
+vim /etc/named.rfc1912.zones	# this is where you make and maintain zones
+/var/named			# this is where zone data or zone files will be here 
+# this is the file whose inclusion you will see in the main file
+```
+
+```bash
+zone "cipher.local" IN {			# in "you need to define zones"
+        type master;				# what is the zone master or salve is to be defined here (primary or secondary)
+        file "forward.cipher.local";	# zone file (the record of this zone) location /var/named make the file here under the name specified by you 
+        allow-update { none; };
+};
+  
+```
+
+
+
+```bash
+cp -v named.localhost forward.cipher.local
+
+```
+now give the access of this file to **named group**
+
+```bash
+chgrp named forward.cipher.local
+```
+```bash
+vim forward.cipher.local
+# wherever you see @ this denotes FQDN of you local PC
+# where there is @ your nameserver will come on that place if FQDN is no set
+# basically @ holds the value of your nameserver, remove @ and type nameserver/hostname/FQDN 
+```
+```bash
+$TTL 1D
+@	IN SOA	ns1.cipher.local. rname.invalid. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	NS	@
+	A	127.0.0.1
+	AAAA	::1
+
+# rname is responsible name server/or person name
+```
+**ERROR detection**
+
+```bash
+named-checkconf		# to check for errors in /etc/named.config
+```
+
+
+
+
+
+
+
+
+
