@@ -193,3 +193,13 @@ iptables -I INPUT 4 -p udp --dport 53 -j ACCEPT			# this will allow the port in 
 
 
 > THIS ENDS CACHE ONLY DNS SERVER CONFIG
+
+
+## Master/Primart Nameserver (Forward zone)
+`when you have the domain name and you need IP you use FORWARD zone`
+
+```bash
+hostname		# the zone you are going to make should get resolved here
+
+# it is NOT necessary that you need to set FQDN to resovle 
+```
