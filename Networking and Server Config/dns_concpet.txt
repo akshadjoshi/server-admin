@@ -40,4 +40,4 @@ SRV RECORD: this works with ADDS
 /etc/sysconfig/network-scripts/       # has dedicated files for network interface ets0 old linux
 `**
 
-
+z
