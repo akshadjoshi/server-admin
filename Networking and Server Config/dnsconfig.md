@@ -224,8 +224,9 @@ zone "cipher.local" IN {			# in "you need to define zones"
   
 ```
 
+**Creating zone file that holds record**
 
-
+*tip* : you can cp the contents of /var/named/named.localhost and edit it according to the zone you are making
 ```bash
 cp -v named.localhost forward.cipher.local
 
