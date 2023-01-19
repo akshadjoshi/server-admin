@@ -91,7 +91,7 @@ vim **/etc/named.conf**
 options {
 	listen-on port 53 { 127.0.0.1; 192.168.1.200; };                   # this is where you mention your server IP so that network client can listen/access
 	listen-on-v6 port 53 { ::1; };
-	directory 	"/var/named";                                             # this is where in holds the zone file
+	directory 	"/var/named";                                             # this is where it holds the zone file
 	dump-file 	"/var/named/data/cache_dump.db";                          # WILL build cache here coz it's a cache only dns server
 	statistics-file "/var/named/data/named_stats.txt";
 	memstatistics-file "/var/named/data/named_mem_stats.txt";
@@ -135,7 +135,7 @@ zone "." IN {                         # internet records
 	file "named.ca";                     # 13 routing server is maintain here
 };
 
-include "/etc/named.rfc1912.zones";
+include "/etc/named.rfc1912.zones";			# this is where you make zone block
 include "/etc/named.root.key";
 
 ```
