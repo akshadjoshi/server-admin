@@ -265,6 +265,7 @@ named-checkzone cipher.local /var/named/forward.cipher.local
 # to check for error in zone file 
 ```
 
+~~so jitne bhi record aapne bana e ho (in terms of domain) aap resolve karengay it will bring it's corrospoding ip~~
 
 
 
