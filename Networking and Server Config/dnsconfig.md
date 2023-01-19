@@ -213,6 +213,7 @@ vim /etc/named.rfc1912.zones	# this is where you make and maintain zones (you ar
 /var/named			# this is where zone data or zone files will be here 
 # this is the file whose inclusion(pointing) you will see in the main file
 ```
+`zone block`
 
 ```bash
 zone "cipher.local" IN {			# in "you need to define zones"
