@@ -209,7 +209,7 @@ vim /etc/hosts		# bind the hostname with IP
 ```
 ```bash
 
-vim /etc/named.rfc1912.zones	# this is where you make and maintain zones
+vim /etc/named.rfc1912.zones	# this is where you make and maintain zones (you are creating a zone block here)
 /var/named			# this is where zone data or zone files will be here 
 # this is the file whose inclusion you will see in the main file
 ```
@@ -235,7 +235,7 @@ now give the access of this file to **named group**
 chgrp named forward.cipher.local
 ```
 ```bash
-vim forward.cipher.local
+vim /var/named/forward.cipher.local 				# this is where you will create all the records
 # wherever you see @ this denotes FQDN of you local PC
 # where there is @ your nameserver will come on that place if FQDN is no set
 # basically @ holds the value of your nameserver, remove @ and type nameserver/hostname/FQDN 
