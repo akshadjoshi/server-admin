@@ -211,7 +211,7 @@ vim /etc/hosts		# bind the hostname with IP
 
 vim /etc/named.rfc1912.zones	# this is where you make and maintain zones (you are creating a zone block here)
 /var/named			# this is where zone data or zone files will be here 
-# this is the file whose inclusion you will see in the main file
+# this is the file whose inclusion(pointing) you will see in the main file
 ```
 
 ```bash
