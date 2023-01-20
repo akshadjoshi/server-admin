@@ -28,7 +28,66 @@ lsof -n -i UDP:67    # to see trafic on specific port
 ```bash
 
 ```
+### To make changes in the interface (multipal IP's)
+```bash
+vim /etc/sysconfig/network-scripts/ifcfg-enp0s3
+```
 
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none                    # set this to dhcp and remove the lines that define static IP to get dynamic IP
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME=enp0s3                                       # interface name
+UUID=6a9978c9-49cb-4d5b-8154-3edd52cd85eb
+DEVICE=enp0s3
+ONBOOT=yes                                          # when device starts it will get connected to internet (if set to yes)
+IPADDR=192.168.1.210
+PREFIX=24                                   # subnet
+GATEWAY=192.168.1.1
+DNS1=8.8.8.8
+```
+
+### one interface multiple IP's  (need when you configure webserver)
+
+```bash
+cp -v /etc/sysconfig/network-scripts/ifcfg-enp0s3 /etc/sysconfig/network-scripts/ifcfg-enp0s3:1
+
+# the new virtual interface name should be added with ':'  
+
+# you have to change the device identity and IP to set multiple IP on a single interface
+```
+
+```
+
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=no
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME=enp0s3
+UUID=6a9978c9-49cb-4d5b-8154-3edd52cd85eb
+DEVICE=enp0s3:2                                   # this is what you need to change
+ONBOOT=yes
+IPADDR=192.168.1.202                              # and this too
+PREFIX=24
+GATEWAY=192.168.1.1
+DNS1=8.8.8.8
+
+```
 
 ## PROCESS
 
