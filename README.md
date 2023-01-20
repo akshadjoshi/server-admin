@@ -9,4 +9,4 @@
 2. cmd to configure various services/server like dns,webserver etc
 3.  [iptables](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/firewall_iptables.md) firewall 
 4. DNS [concept](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dns_concpet.txt) and [configration](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dnsconfig.md) DNS configuration also has cmd regarding DNS
-5. [apache web server]() configuration in debain  
+5. **apache web server** configuration in [debain](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/apache%20webserver_debain.md)  
