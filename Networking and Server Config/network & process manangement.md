@@ -5,28 +5,10 @@
 **`/etc/sysconfig/network-scripts/`**  has dedicated files for network interface in centOS ets0 old linux         
 **`/etc/network/interfaces`**   has dedicated files for network interface in Debian
 
-```bash
-netstat -ntup      # shows ports that a in use or ports that have connection established
-```
-```bash
-netstat -nltup     # shows listening ports
-```
-
-```bash 
-netstat -t        # will tell active and connected ports TCP
-```
-```bash
-lsof -i -n            # will show details of network activities
-lsof -i -n TCP        # will show TCP traffic
-lsof -u ^root -n      # will show the data excluding root
-
-```
-```bash 
-lsof -n -i UDP:67    # to see trafic on specific port
-```
+**ifconfig**
 
 ```bash
-
+ifconfig -a       # to see the hidden interface
 ```
 ### To make changes in the interface (multipal IP's)
 ```bash
@@ -86,6 +68,47 @@ IPADDR=192.168.1.202                              # and this too
 PREFIX=24
 GATEWAY=192.168.1.1
 DNS1=8.8.8.8
+
+```
+### temporary IP
+
+```bash
+ifconfig {interfacename} <ip you want to assign>
+
+```
+
+```bash
+ifconfig enp0s3 192.168.1.31/20       # temp IP with different subnet
+```
+```bash
+
+ifconfig enp0s3 down        # to disable/stop an interface
+```
+
+
+**netstat**
+
+```bash
+netstat -ntup      # shows ports that a in use or ports that have connection established
+```
+```bash
+netstat -nltup     # shows listening ports
+```
+
+```bash 
+netstat -t        # will tell active and connected ports TCP
+```
+```bash
+lsof -i -n            # will show details of network activities
+lsof -i -n TCP        # will show TCP traffic
+lsof -u ^root -n      # will show the data excluding root
+
+```
+```bash 
+lsof -n -i UDP:67    # to see trafic on specific port
+```
+
+```bash
 
 ```
 
