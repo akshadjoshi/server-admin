@@ -8,3 +8,42 @@ dpkg -l | grep "apache"
 ```bash
 apt install apache2
 ```
+**disable directory listing**
+
+```bash
+
+sed -i "s/Options Indexes FollowSymLinks/Options FollowSymLinks/" /etc/apache2/apache2.conf
+
+# directory listing is enabled by default in apache webserver so the above cmd will disable it.
+```
+
+`now restart the service`
+
+```bash
+systemctl restart apache2.service
+
+```
+```bash
+apt install php7.4
+```
+
+
+```bash
+vim /etc/php/7.4/apache2/php.ini
+
+<things to edit>
+
+/memory_limit         # set it to 512M
+
+/max_execution        # set to 500 (takes value in seconds)
+/max_input_vars
+uncomment ;max_input_vars and set it to 10000 
+
+/upload_max_filesize   # set it to 2048M
+
+/post_max_size         # set it to 2048M
+# post size defines the post request that is made/recieve
+
+
+/allow_url_fopen      # must be On
+```
