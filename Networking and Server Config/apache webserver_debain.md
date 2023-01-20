@@ -86,9 +86,13 @@ apt install gnupg
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb      
 
 # mysql community server for debain 
+
+# we are downloading the repo
 ```
 ```bash
 apt install ./mysql-apt-config_0.8.24-1_all.deb
+
+adding the repo to out repolist
 ```
 
 ```bash
