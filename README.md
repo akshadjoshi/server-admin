@@ -10,3 +10,4 @@
 3.  [iptables](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/firewall_iptables.md) firewall 
 4. DNS [concept](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dns_concpet.txt) and [configration](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dnsconfig.md) DNS configuration also has cmd regarding DNS
 5. **apache web server** configuration in [debain](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/apache%20webserver_debain.md)  
+6. [DHCP](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dhcp.md) configuration  
