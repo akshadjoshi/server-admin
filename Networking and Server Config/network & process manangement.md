@@ -45,6 +45,8 @@ cp -v /etc/sysconfig/network-scripts/ifcfg-enp0s3 /etc/sysconfig/network-scripts
 # the new virtual interface name should be added with ':'  
 
 # you have to change the device identity and IP to set multiple IP on a single interface
+
+vim vim /etc/sysconfig/network-scripts/ifcfg-enp0s3:1
 ```
 
 ```
