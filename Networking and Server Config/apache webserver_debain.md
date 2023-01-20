@@ -1,4 +1,4 @@
-- **step 1 (installing)**
+- **step 1: (installing)**
 
 *see for the package* 
 
@@ -8,6 +8,8 @@ dpkg -l | grep "apache"
 ```bash
 apt install apache2
 ```
+
+- **step 2: (configure)**
 **disable directory listing**
 
 ```bash
@@ -27,7 +29,7 @@ systemctl restart apache2.service
 apt install php7.4
 ```
 
-
+## configuring PHP on the webserver
 ```bash
 vim /etc/php/7.4/apache2/php.ini
 
@@ -46,4 +48,57 @@ uncomment ;max_input_vars and set it to 10000
 
 
 /allow_url_fopen      # must be On
+```
+`now restart the service`
+
+```bash
+
+systemctl restart apache2.service
+```
+```bash
+vim /var/www/html/phpinfo.php
+```
+
+```php
+<?php
+
+// Show all information, defaults to INFO_ALL
+phpinfo();
+
+// Show just the module information.
+// phpinfo(8) yields identical results.
+phpinfo(INFO_MODULES);
+
+?>
+
+```
+to check if php is configured properly call the page on web-browser
+```php
+<IP>/phpinfo.php
+```
+## mysql deployment
+
+```bash
+apt install gnupg
+```
+
+```bash
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb      
+
+# mysql community server for debain 
+```
+```bash
+apt install ./mysql-apt-config_0.8.24-1_all.deb
+```
+
+```bash
+apt update
+```
+
+```bash
+apt install mysql-community-server
+```
+
+```bash
+systemctl restart mysql.service
 ```
