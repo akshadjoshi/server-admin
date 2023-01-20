@@ -82,7 +82,9 @@ ifconfig enp0s3 192.168.1.31/20       # temp IP with different subnet
 ```
 ```bash
 
-ifconfig enp0s3 down        # to disable/stop an interface
+ifconfig enp0s3 down        # to disable/stop an interface on hardware level
+
+ifconfig enp0s3 up          # to enable it
 ```
 
 
