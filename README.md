@@ -1,6 +1,6 @@
 # OSCP
 **linux has**
-1. [centos](https://github.com/akshadjoshi/OSCP/blob/main/Linux/ServerOS.md) cmd
+1. [centos](https://github.com/akshadjoshi/OSCP/blob/main/Linux/ServerOS.md) & [debian](https://github.com/akshadjoshi/OSCP/blob/main/Linux/ServerOS.md#debian)cmd
 2. [dir list](https://github.com/akshadjoshi/OSCP/blob/main/Linux/directories%20or%20folder.txt)
 
 
