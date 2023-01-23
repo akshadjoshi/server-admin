@@ -126,6 +126,17 @@ systemctl enable apache2@.service
 ```bash
 mysql -u root -p 
 ```
+
+## mysql remote login (root)
+
+```mysql
+edit the root privileges via phpmyadmin
+# this is the qurey that runs in the background
+CREATE USER 'root'@'%' IDENTIFIED WITH caching_sha2_password BY '***'; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION; 
+
+
+# you need to change password of the new root user which is created by query
+```
 **`Install phpmyadmin`**
 
 ```bash
@@ -144,3 +155,93 @@ chown -Rv www-data:www-data phpmyadmin/
 
 # the ownership on the webcontent should be of apache user
 ```
+
+
+### wordpress configuration
+
+```bash
+https://wordpress.org/latest.zip
+```
+```bash
+mv -v wordpress /var/www/html/wordpress
+```
+
+```bash
+chown -Rv www-data:www-data wordpress
+```
+
+### make wordpress database
+
+```bash
+make a new data base user in phpmyadmin and configure the wordpress with it
+
+
+# this is the qurey that runs behind when you create a new user
+
+CREATE USER 'wordpress'@'localhost' IDENTIFIED WITH caching_sha2_password BY '***';GRANT USAGE ON *.* TO 'wordpress'@'localhost';ALTER USER 'wordpress'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;CREATE DATABASE IF NOT EXISTS `wordpress`;GRANT ALL PRIVILEGES ON `wordpress`.* TO 'wordpress'@'localhost';GRANT ALL PRIVILEGES ON `wordpress\_%`.* TO 'wordpress'@'localhost'; 
+```
+**`name binding`**
+
+```bash
+ vim /etc/hosts
+```
+
+```bash
+vim /etc/apache2/sites-available/mywordpress.conf
+
+
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/wordpress/
+	<Directory /var/www/html/wordpress/>
+		Options FollowSymLinks
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+	ErrorLog /var/log/apache2/wordpress-error_log
+	CustomLog /var/log/apache2/wordpress-access_log common
+</VirtualHost>
+```
+```sh
+
+<VirtualHost *:80>
+	ServerName wordpress.local
+    DocumentRoot /var/www/html/wordpress/
+	<Directory /var/www/html/wordpress/>
+		Options FollowSymLinks
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+	ErrorLog /var/log/apache2/wordpress-error_log
+	CustomLog /var/log/apache2/wordpress-access_log common
+	ServerAlias www.wordpress.local
+</VirtualHost>
+```
+
+
+```bash
+a2ensite mywordpress.conf 
+
+# enable site
+
+look in 
+
+/etc/apache2/sites-available
+
+ls
+
+# should show the site you made
+
+```
+```bash
+systemctl restart apache2.service
+
+```
+
+```bash
+
+a2enmod rewrite
+```
+**Note** - everything under `/var/www/html/*` should be owned by the **web server user** which is in this case **'www-data'**
