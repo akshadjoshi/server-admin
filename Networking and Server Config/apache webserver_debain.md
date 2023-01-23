@@ -129,5 +129,7 @@ mysql -u root -p
 wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip
 
 ```
-
+```bash
+mv -v phpMyAdmin-5.2.0-all-languages /var/www/html/phpmyadmin
+```
 
