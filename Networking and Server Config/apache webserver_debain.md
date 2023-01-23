@@ -106,3 +106,28 @@ apt install mysql-community-server
 ```bash
 systemctl restart mysql.service
 ```
+```bash
+systemctl enable mysql.service
+```
+```bash
+systemctl restart apache2@.service
+```
+
+```bash
+systemctl enable apache2@.service
+```
+
+**`login in into mysql to see if it is configured properly`**
+
+```bash
+mysql -u root -p 
+```
+**`Install phpmyadmin`**
+
+```bash
+
+wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip
+
+```
+
+
