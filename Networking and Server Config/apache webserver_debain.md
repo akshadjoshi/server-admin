@@ -27,6 +27,10 @@ systemctl restart apache2.service
 ```
 ```bash
 apt install php7.4
+
+# or 
+
+apt install php7.4 php7.4-common php7.4-mbstring php7.4-xmlrpc php7.4-soap php7.4-gd php7.4-xml php7.4-intl php7.4-mysql php7.4-cli php7.4-ldap php7.4-zip php7.4-curl
 ```
 
 ## configuring PHP on the webserver
