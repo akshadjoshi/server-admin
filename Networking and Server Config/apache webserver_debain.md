@@ -132,4 +132,11 @@ wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-language
 ```bash
 mv -v phpMyAdmin-5.2.0-all-languages /var/www/html/phpmyadmin
 ```
+```bash
+chown -Rv www-data:www-data phpmyadmin/
 
+# the web user in debian is 'www-data' (for apache webserver)
+# the web user in centos is 'apache' 
+
+# the ownership on the webcontent should be of apache user
+```
