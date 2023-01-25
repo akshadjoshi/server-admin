@@ -41,3 +41,211 @@ SRV RECORD: this works with ADDS
 `**
 
 z
+
+
+
+
+
+
+dns
+
+
+# working 
+
+
+
+DNS, or Domain Name System, is a system that translates domain names (such as www.example.com) into IP addresses (such as 192.0.2.1). It's like a phone book for the internet, mapping website names to their corresponding internet addresses.
+
+Let's say you want to visit the website "www.example.com" in your web browser.
+
+1. First, your computer sends a request to the nearest DNS resolver (ISP) asking for the IP address associated with "www.example.com".
+
+2. The DNS resolver (ISP) will then ask the root name servers (the top level servers which are 13 in no. that knows all the top level domains like .com .in) for the IP address associated with "www.example.com".
+
+3. The root name servers will respond that the address is not known to them, but they will provide the address of the top-level domain server, when the query reaches the TLD name server, the TLD name server answers with the IP of domain name server i.e 8.8.8.8 or your configured dns in centos
+
+
+6. The DNS resolver will then ask the authoritative name server (that you configure in centos) for the IP address associated with "www.example.com".
+
+like:
+
+dig cipher.local @<yourDNSserverIP>
+
+works only when you have created the records 
+
+7. The authoritative name server will respond with the IP address associated with "www.example.com", which is "192.0.2.1".
+
+The DNS resolver will then provide the IP address "192.0.2.1" to your computer, which will then use it to connect to the website "www.example.com" in your web browser.
+
+That's the process of DNS resolution in a nutshell. The entire process happens in a fraction of a second and is transparent to the user. The DNS resolver will also cache the IP address for a certain period of time, so that it doesn't have to go through the entire proces
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+# types
+
+types of record :
+
+NS record - toh yeh vo responsible record hota hain jo primary and secondary ko point karta hain. Agar aapko pata karna hain ki koi particular domain hain uske name record kahan hold hue hain means kahan records banae gae hain vi kaun sa server hain for that we will see name server.
+
+it is that responsible server hain jo aap ke sare records ko hold karta hain it has both primary and secondary 
+
+note : jo bhi name resolv ho raha hain primary se ho raha hain  
+secondary is used for load balancing
+
+PTR record : pointer record it is opposite to A record logic. You have IP and you need to know the name/domain 
+
+SOA : startup authority record iska kam hota hain master and slave ke beechme coordination bitha na.
+
+HIFO :
+
+MX : mail server ko point/hold karta hain.
+
+
+PRIMARY NAME SERVER
+
+1 server can have multipal zones
+
+when you have IP you need the name -- reverse zone is used
+
+name ko IP me convert -- forward zone 
+
+
+
+ZONE are basically record holding files 
+
+
+In short, a zone in DNS is a way to organize and manage a specific group of domain names, similar to how books are organized into sections within a library.
+
+
+
+<---  zone means
+
+Yes, zones in DNS can be thought of as "record holding files" as they contain the DNS records that map domain names to IP addresses. The zone files contain the information needed for the DNS server to properly resolve domain names to IP addresses for the domain names within its zone of authority.
+
+The zone files hold different types of records like A, MX, CNAME, NS, TXT and more, each one of them serves a different purpose.
+
+For example, an A record maps a domain name to an IP address, an MX record maps a domain name to a mail server, and a CNAME record maps a domain name to another domain name.
+
+It is also important to note that DNS zones can be delegated to other DNS servers, which means that the record holding files can be distributed among different DNS servers.
+
+
+
+>
+
+
+
+
+	DIFF BETWEEN FORWARD AND BACKWORD
+
+
+In DNS, a forward zone is a zone that maps domain names to IP addresses. This is the primary function of DNS, as it is used to translate domain names (such as www.example.com) into IP addresses (such as 192.0.2.1). This type of zone is called "forward" because it forwards a domain name to an IP address.
+
+On the other hand, a reverse zone, also called a "backward zone" is a zone that maps IP addresses to domain names. This is less common than forward zone, but it can be useful in certain situations. It is called "reverse" because it reverses the process of mapping domain names to IP addresses. Instead of translating a domain name to an IP address, it translates an IP address to a domain name.
+
+The main difference between a forward zone and reverse zone is the way they map the information. A forward zone maps a domain name to an IP address, while a reverse zone maps an IP address to a domain name. Reverse zones are usually used for reverse DNS lookups and help with troubleshooting network issues and also used for anti-spam and anti-fraud mechanisms.
+
+
+
+
+***Question : how do I  create zones in my dns server in centos 7 ?***
+
+
+
+# To create zones in your DNS server on CentOS 7, you will need to follow these steps:
+
+1.Make sure that the **DNS server software (bind)** is installed. On CentOS 7, you can use the following command to install it:
+
+sudo yum install bind bind-utils
+
+2. Open the DNS server's **main configuration file, named.conf,** which is located in the /etc/ directory.
+
+3. **Add a new "zone" block** to the file for each zone you wish to create. The zone block should include the zone's name, type, and the location of the zone's file. For example, to create a forward zone for the "example.com" domain, the zone block would look like this:
+
+[*A zone block in DNS is a section of the DNS server's main configuration file (named.conf) that defines and configures a specific zone. The zone block contains information about the zone, such as its name, type, and the location of the zone's file. The zone block is used to define the zone and specify the location of the zone file.*]
+
+
+zone "example.com" {
+    type master;
+    file "/var/named/example.com.zone";
+};
+
+
+
+# my example
+I created the zone block here /etc/named.rfc1912.zones 
+
+zone "cipher.local" IN {
+	type master;
+	file "forward.cipher.local";			<!-- this is where you point the zone file which contains all the records -->
+	allow-update { none; };
+};
+
+
+
+4. Create the zone file for each zone you have created in the named.conf file. The zone files should be located in the /var/named/ directory and should be named after the domain they serve (e.g. example.com.zone).
+
+5. Add records to each zone file. The most common record types are A, MX, CNAME, NS, and TXT. Each record maps a domain name to an IP address, a mail server, another domain name, or other information.
+
+6. Configure the permissions and ownership of the zone files.
+sudo chgrp named -R /var/named		
+sudo chown named -R /var/named
+
+Restart the named service.
+sudo systemctl restart named
+
+Test your DNS server by using the dig command.
+dig @<dns server ip address> <domain name>
+
+
+
+
+what is a **zone** block in DNS
+
+This block tells the DNS server that the zone "example.com" is a master zone and that its zone file is located at /var/named/example.com.zone
+
+It is important to note that you can have multiple zone blocks in the named.conf, each one of them representing a different zone.
+
+
+A zone block in DNS is a section of the DNS server's main configuration file (named.conf) that defines and configures a specific zone. The zone block contains information about the zone, such as its name, type, and the location of the zone's file. The zone block is used to define the zone and specify the location of the zone file.
+
+A zone block typically starts with the "zone" keyword, followed by the name of the zone in quotation marks. Inside the curly braces, you can specify various options for the zone. The most common options are the type of the zone, and the location of the zone file. The type of the zone usually is master or slave, and the location of the zone file is a path.
+
+
+
+# Creating zone file that holds record /var/named/forward.cipher.local
+
+$TTL 1D
+@	IN SOA	@ rname.invalid. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	NS	@
+	A	127.0.0.1
+	AAAA	::1
+[root@ns1 named]# cat forward.cipher.local 
+$TTL 1D
+@	IN SOA	ns1.cipher.local. root.cipher.local. (
+					17012023	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+@			IN	NS		ns1.cipher.local.
+ns1			IN	A		192.168.1.200
+cipher.local. 		IN	A		192.168.1.200
+www			IN	CNAME		cipher.local.
+router 			IN	A		192.168.1.1
+db			IN	A		192.168.1.37
+admin			IN	A		192.168.1.40
+phpmyadmin		IN	A		192.168.1.38
+
+
+
+*tip* : you can cp the contents of /var/named/named.localhost and edit it according to the zone you are making 
+
+
+
+
+
