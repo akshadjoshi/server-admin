@@ -147,54 +147,6 @@ The main difference between a forward zone and reverse zone is the way they map 
 
 
 
-***Question : how do I  create zones in my dns server in centos 7 ?***
-
-
-
-# To create zones in your DNS server on CentOS 7, you will need to follow these steps:
-
-1.Make sure that the **DNS server software (bind)** is installed. On CentOS 7, you can use the following command to install it:
-
-sudo yum install bind bind-utils
-
-2. Open the DNS server's **main configuration file, named.conf,** which is located in the /etc/ directory.
-
-3. **Add a new "zone" block** to the file for each zone you wish to create. The zone block should include the zone's name, type, and the location of the zone's file. For example, to create a forward zone for the "example.com" domain, the zone block would look like this:
-
-[*A zone block in DNS is a section of the DNS server's main configuration file (named.conf) that defines and configures a specific zone. The zone block contains information about the zone, such as its name, type, and the location of the zone's file. The zone block is used to define the zone and specify the location of the zone file.*]
-
-
-zone "example.com" {
-    type master;
-    file "/var/named/example.com.zone";
-};
-
-
-
-# my example
-I created the zone block here /etc/named.rfc1912.zones 
-
-zone "cipher.local" IN {
-	type master;
-	file "forward.cipher.local";			<!-- this is where you point the zone file which contains all the records -->
-	allow-update { none; };
-};
-
-
-
-4. Create the zone file for each zone you have created in the named.conf file. The zone files should be located in the /var/named/ directory and should be named after the domain they serve (e.g. example.com.zone).
-
-5. Add records to each zone file. The most common record types are A, MX, CNAME, NS, and TXT. Each record maps a domain name to an IP address, a mail server, another domain name, or other information.
-
-6. Configure the permissions and ownership of the zone files.
-sudo chgrp named -R /var/named		
-sudo chown named -R /var/named
-
-Restart the named service.
-sudo systemctl restart named
-
-Test your DNS server by using the dig command.
-dig @<dns server ip address> <domain name>
 
 
 
@@ -212,38 +164,6 @@ A zone block typically starts with the "zone" keyword, followed by the name of t
 
 
 
-# Creating zone file that holds record /var/named/forward.cipher.local
-
-$TTL 1D
-@	IN SOA	@ rname.invalid. (
-					0	; serial
-					1D	; refresh
-					1H	; retry
-					1W	; expire
-					3H )	; minimum
-	NS	@
-	A	127.0.0.1
-	AAAA	::1
-[root@ns1 named]# cat forward.cipher.local 
-$TTL 1D
-@	IN SOA	ns1.cipher.local. root.cipher.local. (
-					17012023	; serial
-					1D	; refresh
-					1H	; retry
-					1W	; expire
-					3H )	; minimum
-@			IN	NS		ns1.cipher.local.
-ns1			IN	A		192.168.1.200
-cipher.local. 		IN	A		192.168.1.200
-www			IN	CNAME		cipher.local.
-router 			IN	A		192.168.1.1
-db			IN	A		192.168.1.37
-admin			IN	A		192.168.1.40
-phpmyadmin		IN	A		192.168.1.38
-
-
-
-*tip* : you can cp the contents of /var/named/named.localhost and edit it according to the zone you are making 
 
 
 
