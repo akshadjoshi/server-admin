@@ -35,4 +35,8 @@ mysql -u root -p
 
 # try to login and run qurey
 ```
+
+
+<!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
+<!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
 z
