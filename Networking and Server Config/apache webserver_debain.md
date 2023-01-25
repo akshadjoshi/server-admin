@@ -184,6 +184,7 @@ CREATE USER 'wordpress'@'localhost' IDENTIFIED WITH caching_sha2_password BY '**
 
 ```bash
  vim /etc/hosts
+192.168.1.250	web-server mywordpress.local www.mywordpress.local
 ```
 
 ```bash
@@ -219,7 +220,21 @@ vim /etc/apache2/sites-available/mywordpress.conf
 	ServerAlias www.wordpress.local
 </VirtualHost>
 ```
-
+```bash
+<VirtualHost *:80>
+	ServerName mywordpress.local
+    DocumentRoot /var/www/html/wordpress/
+	<Directory /var/www/html/wordpress/>
+		Options FollowSymLinks
+		AllowOverride All
+		Order allow,deny
+		allow from all
+	</Directory>
+	ErrorLog /var/log/apache2/wordpress-error_log
+	CustomLog /var/log/apache2/wordpress-access_log common
+	ServerAlias www.mywordpress.local
+</VirtualHost>
+```
 
 ```bash
 a2ensite mywordpress.conf 
@@ -228,7 +243,7 @@ a2ensite mywordpress.conf
 
 look in 
 
-/etc/apache2/sites-available
+/etc/apache2/sites-sites-enabled
 
 ls
 
@@ -241,7 +256,24 @@ systemctl restart apache2.service
 ```
 
 ```bash
-
+sudo a2enmod rewrite
+# or 
 a2enmod rewrite
+```
+
+```bash
+systemctl restart apache2.service
+
+```
+
+
+### now define the ip and domain on you pc to access it 
+
+```bash
+sudo vim /etc/hosts
+
+#practical ip
+192.168.1.250	www.mywordpress.local mywordpress.local
+                                                        
 ```
 **Note** - everything under `/var/www/html/*` should be owned by the **web server user** which is in this case **'www-data'**
