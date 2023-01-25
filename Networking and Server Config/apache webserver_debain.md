@@ -157,7 +157,7 @@ chown -Rv www-data:www-data phpmyadmin/
 ```
 
 
-### wordpress configuration
+### wordpress installation and configuration
 
 ```bash
 https://wordpress.org/latest.zip
