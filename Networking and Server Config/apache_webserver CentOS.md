@@ -17,7 +17,7 @@ sudo systemctl start mysqld
 
 sudo systemctl start mysqld
 ```
-#### NOTE : During the installation process, a temporary password is generated for the MySQL root user. Locate it in the mysqld.log with this command
+#### NOTE : During the installation process, a temporary password is generated for the MySQL root user. Locate it in the `mysqld.log` with this command
 
 ```bash
 sudo grep 'temporary password' /var/log/mysqld.log
