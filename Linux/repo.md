@@ -1,18 +1,29 @@
+
+
+**epel           (Extra Packages for Enterprise Linux)**
+
+**REMI repo      (Used to install and configure PHP)** 
+```
+sudo rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+```
+**RPM fusion     (Used to install Multimedia Packages)**
+
+**el repo        (has around 135 packages)** > adding it might resolve dependency errors 
+```bash
+
+yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+```
+**NUX repo**       (GUI tools for CentOS) > also helps in Desktop creation 
+```bash
+
+rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 ```
 
-epel           (Extra Packages for Enterprise Linux)
-REMI repo      (Used to install and configure PHP) sudo rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+**IUS repo **      (provides newer versions of select software for RHEL and CentOS.)
 
-RPM fusion     (Used to install Multimedia Packages)
+**Webtatic repo**  (repository generally deals with the web hosting related packages)
 
-EL repo        (has around 135 packages) > adding it might resolve dependency errors 
-yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
-
-NUX repo       (GUI tools for CentOS) > also helps in Desktop creation 
-IUS repo       (provides newer versions of select software for RHEL and CentOS.)
-Webtatic repo  (repository generally deals with the web hosting related packages)
-
-
+```bash
 yum repolist        # (will show enable list) 
 yum list            # (avaliable package list)
 yum repolist all    # (will update the repo)
@@ -20,7 +31,7 @@ yum repolist all    # (will update the repo)
 To enable a repository, set enabled=1 in the corresponding repository configuration section in /etc/yum.repos.d/remi.repo.
 
 ```
-DEBIAN 
+**DEBIAN **
 
 debgen.simplylinux.ch   # (repo generator for debian distro)
 
@@ -43,5 +54,4 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/de
 
 REPO link
 
-NUX repo
-rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+
