@@ -1,9 +1,13 @@
+```
 
 epel           (Extra Packages for Enterprise Linux)
 REMI repo      (Used to install and configure PHP) sudo rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 RPM fusion     (Used to install Multimedia Packages)
-EL repo        (has around 135 packages) > adding it might resolve dependency errors
+
+EL repo        (has around 135 packages) > adding it might resolve dependency errors 
+yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+
 NUX repo       (GUI tools for CentOS) > also helps in Desktop creation 
 IUS repo       (provides newer versions of select software for RHEL and CentOS.)
 Webtatic repo  (repository generally deals with the web hosting related packages)
@@ -15,7 +19,7 @@ yum repolist all    # (will update the repo)
 
 To enable a repository, set enabled=1 in the corresponding repository configuration section in /etc/yum.repos.d/remi.repo.
 
-
+```
 DEBIAN 
 
 debgen.simplylinux.ch   # (repo generator for debian distro)
