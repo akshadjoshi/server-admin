@@ -1,5 +1,7 @@
 ```bash
 sudo yum --enablerepo=remi-php74 install php php-bz2 php-mysql php-curl php-gd php-intl php-common php-mbstring php-xml
+
+# need this to install packages regarding phpmyadmin
 ```
 ## mysql installation in centOS 7
 
@@ -36,6 +38,40 @@ mysql -u root -p
 # try to login and run qurey
 ```
 
+## phpmyadmin
+
+```bash
+
+yum install php php-common.x86_64 php-mcrypt.x86_64 php-cli.x86_64 php-opcache.x86_64 php-gd.x86_64 php-curl php-mysqlnd.x86_64 php-xml.x86_64 php-mbstring.x86_64 mysql-devel php-pear php-mbstring php-pecl-http php-pecl-curl php-session
+```
+
+```bash
+wget https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip
+
+unzip phpMyAdmin-5.2.0-all-languages.zip
+```
+```bash
+mv phpMyAdmin-5.2.0-all-languages /var/www/html/phpmyadmin
+```
+```bash
+vim /etc/httpd/conf/httpd.conf
+
+```
+**`start virtualhosting for phpmyadmin (via IP)`**
+
+```bash
+<VirtualHost 192.168.1.201:80>
+	DocumentRoot /var/www/html/phpmyadmin/
+	DirectoryIndex index.php
+</VirtualHost>
+```
+```bash
+systemctl restart httpd.service
+```
+```
+# Even if you don't change the ownership to apache user you can still call it on browser
+# Remember to install relevant dependency package for phpmyadmin 
+```
 
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
