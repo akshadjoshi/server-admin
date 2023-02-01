@@ -68,6 +68,20 @@ vim /etc/httpd/conf/httpd.conf
 ```bash
 systemctl restart httpd.service
 ```
+### disable selinux
+
+```bash
+vim /etc/sysconfig/selinux
+
+SELINUX=enforcing
+
+# change it to 
+
+SELINUX=disabled
+```
+
+restart the PC
+
 ```
 # Even if you don't change the ownership to apache user you can still call it on browser
 # Remember to install relevant dependency package for phpmyadmin 
