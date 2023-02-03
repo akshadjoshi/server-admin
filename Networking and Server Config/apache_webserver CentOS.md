@@ -87,6 +87,26 @@ restart the PC
 # Remember to install relevant dependency package for phpmyadmin 
 ```
 
+
+### Virtual Host BINDING
+
+**by PORT**
+
+```bash
+Listen 6969
+<VirtualHost 192.168.1.150:6969>
+	DirectoryIndex index.html
+	DocumentRoot /var/www/html/site1
+</VirtualHost>
+
+
+<VirtualHost 192.168.1.150>
+	DirectoryIndex index.html
+	DocumentRoot /var/www/html/site2
+
+
+```
+
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
 z
