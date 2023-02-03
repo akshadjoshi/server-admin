@@ -132,6 +132,7 @@ Listen 6969
 
 `Give the dns server of your centOS in windows machine and browse the by the name specified in you centos.`
 
+![onclient](https://github.com/akshadjoshi/OSCP/blob/main/image/dns%20practical.png?raw=true)
 
 
 ```
