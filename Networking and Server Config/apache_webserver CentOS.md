@@ -57,7 +57,7 @@ mv phpMyAdmin-5.2.0-all-languages /var/www/html/phpmyadmin
 vim /etc/httpd/conf/httpd.conf
 
 ```
-**`start virtualhosting for phpmyadmin (via IP)`**
+**start [virtualhosting](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/apache_webserver%20CentOS.md#virtual-host-binding) for phpmyadmin (via IP)**
 
 ```bash
 <VirtualHost 192.168.1.201:80>
