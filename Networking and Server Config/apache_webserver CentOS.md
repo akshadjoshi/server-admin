@@ -134,6 +134,8 @@ Listen 6969
 ```
 ![on client](https://github.com/akshadjoshi/OSCP/blob/main/image/dns%20practical.png?raw=true)
 
+**You all need to make changes in server's host file /etc/hosts**
+![hostfile](https://github.com/akshadjoshi/OSCP/blob/main/image/on%20you%20centos%20os.png?raw=true)
 
 
 
