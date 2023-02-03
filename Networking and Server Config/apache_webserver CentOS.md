@@ -107,6 +107,13 @@ Listen 6969
 
 ```
 
+
+# command to check syntax error
+
+```bash
+httpd -t
+```
+
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
 z
