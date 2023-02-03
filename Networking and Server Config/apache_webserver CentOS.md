@@ -103,7 +103,7 @@ Listen 6969
 <VirtualHost 192.168.1.150>
 	DirectoryIndex index.html
 	DocumentRoot /var/www/html/site2
-
+</VirtualHost>
 
 ```
 
