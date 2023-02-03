@@ -256,6 +256,9 @@ ritesh.local.   IN      A                       192.168.1.150
 www             IN      CNAME                   ritesh.local.
 pc1             IN      A                       192.168.1.151
 ```
+
+**note the PRIMARY DNS has applications in apache webserver in centOS**
+
 **ERROR detection**
 
 ```bash
