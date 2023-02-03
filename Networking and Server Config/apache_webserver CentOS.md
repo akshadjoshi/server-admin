@@ -100,7 +100,7 @@ Listen 6969
 </VirtualHost>
 
 
-<VirtualHost 192.168.1.150>
+<VirtualHost 192.168.1.150>				# default port 80
 	DirectoryIndex index.html
 	DocumentRoot /var/www/html/site2
 </VirtualHost>
