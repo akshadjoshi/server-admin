@@ -244,17 +244,17 @@ vim /var/named/forward.cipher.local 				# this is where you will create all the 
 ```
 ```bash
 $TTL 1D
-@	IN SOA	ns1.cipher.local. rname.invalid. (
-					0	; serial
-					1D	; refresh
-					1H	; retry
-					1W	; expire
-					3H )	; minimum
-	NS	@
-	A	127.0.0.1
-	AAAA	::1
-
-# rname is responsible name server/or person name
+@       IN SOA    ns2.ritesh.local. root.ritesh.local. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+@               IN      NS                      ns2.ritesh.local.
+ns2             IN      A                       192.168.1.150
+ritesh.local.   IN      A                       192.168.1.150
+www             IN      CNAME                   ritesh.local.
+pc1             IN      A                       192.168.1.151
 ```
 **ERROR detection**
 
