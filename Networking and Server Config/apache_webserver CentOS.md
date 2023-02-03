@@ -113,6 +113,28 @@ Listen 6969
 ```bash
 httpd -t
 ```
+**by NAME**
+
+```bash
+#Listen 8080
+<VirtualHost 192.168.1.150>
+Servername ritesh.local
+	DirectoryIndex index.html
+	DocumentRoot /var/www/html/mouintain
+ServerAlias www.ritesh.local
+</VirtualHost>
+
+Listen 6969
+<VirtualHost 192.168.1.150:6969>
+	DirectoryIndex index.html
+	DocumentRoot /var/www/html/bitcoin
+</VirtualHost>
+
+`Give the dns server of your centOS in windows machine and browse the by the name specified in you centos.`
+
+
+
+```
 
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
