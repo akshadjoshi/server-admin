@@ -50,6 +50,12 @@ vim /etc/sysconfig/iptables
 ```bash
 /var/ftp/pub/
 ```
+
+**change the permisson to of the above folder if you cannot download **
+
+```bash
+chmod -Rv 777 * 
+```
 ### FTP client
 
 ```bash
@@ -66,3 +72,7 @@ ftp
 
 ```
 
+# CMD to use after ftp login 
+
+```bash
+get (filename)
