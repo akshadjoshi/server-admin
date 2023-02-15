@@ -12,3 +12,4 @@
 5. **apache web server** configuration in [debain](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/apache%20webserver_debain.md)  
 6. [DHCP](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/dhcp.md) configuration  
 7. **apache web server** configuration in [CentOS 7](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/apache_webserver%20CentOS.md)
+8. [FTP](https://github.com/akshadjoshi/OSCP/blob/main/Networking%20and%20Server%20Config/ftp_config.md) **server** configuration 
