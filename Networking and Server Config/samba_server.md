@@ -21,3 +21,47 @@ smbtree -D workgroup -U emp1
 ```bash
 smbtree -D <workgroup/domain> -U <username>
 ```
+**smbtree** is for detection but use **nmap** if for scan
+
+### smbclient
+
+```bash
+smbclient -L <IP> -U <username>
+```
+
+```bash
+# Example : 
+
+smbclient -L //192.168.1.100 -U emp1
+
+# -L shows list 
+# to access the listed data remove -L
+```
+**NULL session**
+```bash
+
+ smbclient -L //192.168.1.100 -U "" -N
+```
+`works if smb service is misconfigured`
+
+```bash
+smbclient -L <ip> -U "" -N
+```
+
+
+    
+
+**data fetch**
+
+```bash
+
+smbclient  //192.168.1.100/data -U emp1
+````
+```
+lcd <dirlocation>
+
+# to change the dir you want to download the file on your local PC
+```
+
+
+
