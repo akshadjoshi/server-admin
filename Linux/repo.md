@@ -26,6 +26,14 @@ sudo rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 ```bash
 yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
 ```
+
+ OR
+ 
+ ```bash
+ rpm -ivh https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+ 
+ ```
+ 
 - **NUX repo**       `(GUI tools for CentOS)` **`> also helps in Desktop creation`** 
 ```bash
 
