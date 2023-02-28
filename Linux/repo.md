@@ -2,6 +2,19 @@
 
 - **epel           (Extra Packages for Enterprise Linux)**
 
+command to download **epel**  and later configure it via rpm
+
+```bash
+rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+# the link you see is the where the epel repo for centos 7 is indexed
+```
+```bash
+https://dl.fedoraproject.org/pub/epel/
+
+# this the link where epel repo is indexed if you have a different version for centos you can search it from the link
+```
+
 - **REMI repo      (Used to install and configure PHP)** 
 ```
 sudo rpm -ivh http://rpms.remirepo.net/enterprise/remi-release-7.rpm
