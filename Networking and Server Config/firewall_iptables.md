@@ -80,6 +80,13 @@ iptables -I INPUT -p tcp --dport 2222 -j ACCEPT        # cmd to allow or inser a
 iptables -D INPUT <chain number>						# to delete a chain from the table 	
            <chain>
 ```
+
+### to add a rule in firewall
+
+```bash
+iptabes -I INPUT 4 -p tcp --dport (portnumber) -j ACCEPT
+```
+
 ### ERRORS
 1. when the **port is allowed in firewall via iptables** but **service is not running on the server**
 
