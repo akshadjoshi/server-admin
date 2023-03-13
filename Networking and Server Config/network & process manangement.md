@@ -88,7 +88,19 @@ ifconfig enp0s3 down        # to disable/stop an interface on hardware level
 
 ifconfig enp0s3 up          # to enable it
 ```
+#### static IP for debain
 
+```bash
+# the primary network interface
+allow-hotplug enp0s3
+iface enp0s3 inet static
+		address 192.168.200.10
+		gateway 192.168.200.1
+		# dns-* options 
+		dns-nameservers 8.8.8.8
+
+
+```
 
 **netstat**
 
