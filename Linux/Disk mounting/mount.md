@@ -89,3 +89,7 @@ blkid
 UUID=<UUID of new partition> /mnt/newspace ext4 defaults 0 0
 ```
 
+```bash
+mount -a 
+```
+
