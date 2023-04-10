@@ -7,7 +7,7 @@
 /etc/os-release        # (tells details about the OS)
 /var/cache/yum/        # (repo cache)
 /etc/default/useradd   # (shells default details) 
-
+/etc/shells            # (avaliable shell on pc bash,zsh etc ...)
 /var/lib/mlocate/mlocate.db  # (database files for mlocate)
 
 /etc/hostname  ---- localhost.localdomain       
@@ -47,3 +47,12 @@ THE BELLOW FILES HELP MAINTAIN ZONE IN DNS
 /var/named/named.empty         
 /var/named/named.localhost      # file to maintain localhost zone (localhost name will be resolved from here)
 /var/named/named.loopback        # loopback zone maintain 
+
+
+
+
+
+LINUX IMP DIR
+
+/usr/bin          # (is where you will get all the commands/binaries install via 'apt' )
+/usr/local/bin    # (is where all of you add or place the binary installed via compiling source code)
