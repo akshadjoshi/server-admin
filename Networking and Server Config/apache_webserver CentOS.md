@@ -145,7 +145,19 @@ Listen 6969
 ![hostfile](https://github.com/akshadjoshi/OSCP/blob/main/image/on%20you%20centos%20os.png?raw=true)
 
 
+**by TYPE**
 
+```bash
+<VirtualHost 192.168.1.200>
+    SSLEngine on
+
+    SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+        DocumentRoot /var/www/html/phpmyadmin/
+        DirectoryIndex index.php
+</VirtualHost>
+
+```
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-apache-on-a-centos-7-server -->
 <!-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7 -->
 z
