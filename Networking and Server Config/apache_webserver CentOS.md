@@ -85,8 +85,15 @@ restart the PC
 ```
 # Even if you don't change the ownership to apache user you can still call it on browser
 # Remember to install relevant dependency package for phpmyadmin 
+# if the service is configured properly check it via netstat
+# dont forget to allow the port in firewall
 ```
-
+```sh
+ iptables -L INPUT --line-numbers -n
+```
+```bash
+iptables -I INPUT 4 -p tcp --dport 80 -j ACCEPT
+```
 
 ### Virtual Host BINDING
 
