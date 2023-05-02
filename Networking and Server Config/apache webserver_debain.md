@@ -98,7 +98,7 @@ apt install ./mysql-apt-config_0.8.24-1_all.deb
 
 adding the repo to out repolist
 ```
-**if the above command gives error install via bellow command **
+**if the above command gives error install via bellow command**
 
 ```bash
 sudo dpkg -i mysql-apt-config*
