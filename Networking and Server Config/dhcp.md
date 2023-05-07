@@ -93,6 +93,19 @@ host windows {
 
 	
 ```
+
+
+```bash
+authoritative;
+subnet 192.168.2.0 netmask 255.255.255.0 {
+  range 192.168.2.26 192.168.2.30;
+  option domain-name-servers 8.8.8.8, 8.8.4.4;
+  option routers 192.168.2.1;
+  option broadcast-address 192.168.2.255;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+```
 	
 	
 **Note** : in order to perform this practical you need to set the **network adapter settings** to **Internal Network** for both server and client 
