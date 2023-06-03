@@ -49,6 +49,10 @@ THE BELLOW FILES HELP MAINTAIN ZONE IN DNS
 /var/named/named.loopback        # loopback zone maintain 
 
 
+DATABASE (MYSQL) IMP DIR
+
+/var/lib/mysql
+/etc/my.cnf
 
 
 
