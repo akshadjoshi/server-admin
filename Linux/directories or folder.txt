@@ -52,7 +52,7 @@ THE BELLOW FILES HELP MAINTAIN ZONE IN DNS
 
 PHP APACHE IMP DIR
 
-/etc/php/7.4/apache2/php.ini
+/etc/php/7.4/apache2/php.ini          # php info page
 
 DATABASE (MYSQL) IMP DIR
 
