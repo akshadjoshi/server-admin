@@ -141,6 +141,17 @@ CREATE USER 'root'@'%' IDENTIFIED WITH caching_sha2_password BY '***'; GRANT ALL
 
 # you need to change password of the new root user which is created by query
 ```
+
+## enable remote login internally
+```mysql
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+add this line at the bottom
+
+```txt
+bind-address	= 0.0.0.0
+```
+
 **`Install phpmyadmin`**
 
 ```bash
