@@ -1,5 +1,1 @@
-<a href="http://stackoverflow.com" target="_blank">Go</a>
-
-[go](http://stackoverflow.com){:target="_blank"}.
-
-[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+<a href="placeholder.com" target="_blank">Opens in new tab</a>
