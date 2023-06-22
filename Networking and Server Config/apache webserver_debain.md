@@ -175,7 +175,7 @@ chown -Rv www-data:www-data phpmyadmin/
 ### wordpress installation and configuration
 
 ```bash
-https://wordpress.org/latest.zip
+wget https://wordpress.org/latest.zip
 ```
 ```bash
 mv -v wordpress /var/www/html/wordpress
