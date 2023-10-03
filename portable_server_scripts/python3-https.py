@@ -1,3 +1,4 @@
+# PUT for upload and GET for download
 import socket, os
 from socketserver import BaseServer
 from http.server import HTTPServer
