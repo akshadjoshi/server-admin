@@ -1,3 +1,4 @@
+# PUT for upload and GET for download
 import http.server
 import socketserver
 import argparse
