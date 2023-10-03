@@ -1,6 +1,6 @@
 # generate a self-signed SSL/TLS certificate using OpenSSL
 # openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
-
+# PUT for upload and GET for download
 
 import BaseHTTPServer, SimpleHTTPServer
 import ssl
