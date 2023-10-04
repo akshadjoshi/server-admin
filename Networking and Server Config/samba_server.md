@@ -62,6 +62,10 @@ lcd <dirlocation>
 
 # to change the dir you want to download the file on your local PC
 ```
+`see this code in raw mode`
+
+<!-- https://subba-lakshmi.medium.com/create-a-network-share-in-linux-using-samba-via-cli-and-access-using-samba-client-46ae16a012c3 -->
+
 
 
 
