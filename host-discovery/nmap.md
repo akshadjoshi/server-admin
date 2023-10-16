@@ -36,3 +36,9 @@ nmap -v -p-
 ```bash
  nmap -v -p- -sV 192.168.1.4
 ```
+
+### UDP
+
+```bash
+nmap -v -Pn -n 192.168.1.194 -sU --top-ports=20
+```
