@@ -42,3 +42,9 @@ nmap -v -p-
 ```bash
 nmap -v -Pn -n 192.168.1.194 -sU --top-ports=20 -v
 ```
+
+`best for UDP`
+
+```bash
+nmap -vv -Pn -n -sU --top-ports=20 -A 192.168.1.38
+```
