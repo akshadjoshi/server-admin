@@ -11,8 +11,12 @@ nmap -v -Pn -n -sT -sV -sC  -p- 192.168.1.3 --webxml -oA allportscan
 nmap -v -Pn -n -sT -sV -sC  <IP>
 ```
 ```bash
-nmap -Pn -n -sCV 
+nmap -v -Pn -n -sC -sV 192.168.56.103 --open
 ```
+```bash
+nmap -vv -Pn -n 192.168.56.103
+```
+
 
 - **scan a specific/particular port**
 
