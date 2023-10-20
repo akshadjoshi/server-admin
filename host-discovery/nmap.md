@@ -37,6 +37,13 @@ nmap -v -p-
  nmap -v -p- -sV 192.168.1.4
 ```
 
+## pivot network scan
+`ping sweep` 
+
+```bash
+for i in $(seq 254); do ping 192.168.56.${i} -c -W1 & done | grep from
+```
+
 ### UDP
 
 ```bash
