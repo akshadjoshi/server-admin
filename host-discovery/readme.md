@@ -55,3 +55,9 @@ nmap -v -Pn -n 192.168.1.194 -sU --top-ports=20 -v
 ```bash
 nmap -vv -Pn -n -sU --top-ports=20 -A 192.168.1.38
 ```
+
+### arp-scan for virtual box host-only adapter
+
+```bash
+sudo arp-scan --interface=vboxnet0 --localnet
+```
