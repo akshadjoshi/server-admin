@@ -28,6 +28,10 @@ nmap -v -Pn -sT -sV -p <specific port -sV=<default> <ip>
 ```bash
 nmap -v -Pn -sT -sV -p 445 --script=smb* <ip>
 ```
+- **might help in port knocking situation**
+```bash
+nmap -vv -Pn -sS -p 80,22 192.168.56.103
+```
 
 ### Internal Network Scan
 
@@ -40,6 +44,8 @@ nmap -v -p-
 ```bash
  nmap -v -p- -sV 192.168.1.4
 ```
+
+
 
 ## pivot network scan
 `ping sweep` 
