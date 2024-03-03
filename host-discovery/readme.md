@@ -71,3 +71,16 @@ nmap -vv -Pn -n -sU --top-ports=20 -A 192.168.1.38
 ```bash
 sudo arp-scan --interface=vboxnet0 --localnet
 ```
+
+### NC banner grabbing and port scan
+
+# TCP 
+
+```
+nc -nvv -w 1 -z <IP> 1-10000
+```
+# UDP 
+
+```
+nc -nv -u -z -w 1 <IP> 120-123
+```
