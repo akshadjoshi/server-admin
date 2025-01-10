@@ -7,7 +7,7 @@ nmap -v -Pn -n -sT -sV -sC  -p- 192.168.1.3 --webxml -oA allportscan
 ### all ports scan
 
 ```bash
-nmap -sT -p- --min-rate 5000 --max-retries 1 192.168.119.110 -oN nmap/allports-scan
+nmap -sT -p- --min-rate 5000 --max-retries 1 <IP> -oN nmap/allports-scan
 ```
 
 `change the target IP`
